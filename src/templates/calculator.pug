@@ -1,0 +1,179 @@
+extends layouts/main
+
+block header
+  include layouts/header
+
+block content
+  nav(aria-label="breadcrumb" class="breadcrumb-place" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);")
+    .container
+      ol.breadcrumb
+        li.breadcrumb-item: a(href="/"): svg(class="svg-icon" viewBox="0 0 14 14" width="14" height="14"): use(xlink:href="#svg-breadcrumb-home")
+        li.breadcrumb-item.active Калькулятор стоимости анализов
+
+  .page__content
+    .container
+      h1.page__title Калькулятор стоимости анализов
+      .calculator(data-calculator)
+        .calculator__search
+          .c-search
+            .c-search__field
+              input(type="text" placeholder="Поиск анализов" data-search-input)
+            button(type="submit").c-search__submit
+              svg(class="svg-icon" viewBox="0 0 16 17" width="16" height="17"): use(xlink:href="#svg-search")
+            .c-search__dropdown(data-search-dropdown)
+              .c-search-list(data-search-list)
+                .c-search-list__link(data-search-link data-id="31") Тиреотропный гормон -ТТГ
+                .c-search-list__link(data-search-link data-id="34") Лютеинизирующий гормон - ЛГ
+
+        .calculator__container
+          .calc-item(data-group).expanded
+            .calc-item__header
+              .calc-item__title Гормональные исследования
+              .calc-item__toggle: svg(class="svg-icon" viewBox="0 0 11 9" width="11" height="9"): use(xlink:href="#svg-price-panel-toggle")
+            .calc-item__body
+              .calc-item__btn
+                button.btn.btn-outline-primary.btn-select-all(data-select-all)
+                  span Выбрать все
+                  span Снять все
+              .calc-item__fields
+                .calc-fields
+                  .calc-fields__container
+                    .calc-fields__item
+                      .checkbox
+                        label
+                          input(type="checkbox" data-price="440" data-name="Тестостерон" data-checkbox="29")
+                          .checkbox__cr
+                          .checkbox__text Тестостерон - <span>440 рублей</span>
+                    .calc-fields__item
+                      .checkbox
+                        label
+                          input(type="checkbox" data-price="560" data-name="Xорионический гонадотропин человека - в - ХГЧ кол" data-checkbox="30")
+                          .checkbox__cr
+                          .checkbox__text Xорионический гонадотропин человека - в - ХГЧ кол - <span>560 рублей</span>
+                    .calc-fields__item
+                      .checkbox
+                        label
+                          input(type="checkbox" data-price="390" data-name="Тиреотропный гормон -ТТГ" data-checkbox="31")
+                          .checkbox__cr
+                          .checkbox__text Тиреотропный гормон -ТТГ - <span>390 рублей</span>
+                    .calc-fields__item
+                      .checkbox
+                        label
+                          input(type="checkbox" data-price="430" data-name="Тироксин свободный - Т4 свободный" data-checkbox="32")
+                          .checkbox__cr
+                          .checkbox__text Тироксин свободный - Т4 свободный - <span>430 рублей</span>
+                    .calc-fields__item
+                      .checkbox
+                        label
+                          input(type="checkbox" data-price="430" data-name="Трийодтиронин свободный - Т3 свободный" data-checkbox="33")
+                          .checkbox__cr
+                          .checkbox__text Трийодтиронин свободный - Т3 свободный - <span>430 рублей</span>
+                    .calc-fields__item
+                      .checkbox
+                        label
+                          input(type="checkbox" data-price="440" data-name="Лютеинизирующий гормон - ЛГ" data-checkbox="34")
+                          .checkbox__cr
+                          .checkbox__text Лютеинизирующий гормон - ЛГ - <span>440 рублей</span>
+                    .calc-fields__item
+                      .checkbox
+                        label
+                          input(type="checkbox" data-price="440" data-name="Прогестерон" data-checkbox="35")
+                          .checkbox__cr
+                          .checkbox__text Прогестерон - <span>440 рублей</span>
+                    .calc-fields__item
+                      .checkbox
+                        label
+                          input(type="checkbox" data-price="440" data-name="Пролактин" data-checkbox="36")
+                          .checkbox__cr
+                          .checkbox__text Пролактин - <span>440 рублей</span>
+                    .calc-fields__item
+                      .checkbox
+                        label
+                          input(type="checkbox" data-price="440" data-name="Фолликулостимулирующий гормон - ФСГ" data-checkbox="37")
+                          .checkbox__cr
+                          .checkbox__text Фолликулостимулирующий гормон - ФСГ - <span>440 рублей</span>
+                    .calc-fields__item
+                      .checkbox
+                        label
+                          input(type="checkbox" data-price="440" data-name="Эстрадиол -E2" data-checkbox="38")
+                          .checkbox__cr
+                          .checkbox__text Эстрадиол -E2 - <span>440 рублей</span>
+
+          .calc-item(data-group)
+            .calc-item__header
+              .calc-item__title Коагулологические исследования (Гемостаз)
+              .calc-item__toggle: svg(class="svg-icon" viewBox="0 0 11 9" width="11" height="9"): use(xlink:href="#svg-price-panel-toggle")
+            .calc-item__body
+              .calc-item__btn
+                button.btn.btn-outline-primary.btn-select-all(data-select-all)
+                  span Выбрать все
+                  span Снять все
+              .calc-item__fields
+                .calc-fields
+                  .calc-fields__container
+                    .calc-fields__item
+                      .checkbox
+                        label
+                          input(type="checkbox" data-price="300" data-name="Протромбиновое время" data-checkbox="39")
+                          .checkbox__cr
+                          .checkbox__text Протромбиновое время - <span>300 рублей</span>
+                    .calc-fields__item
+                      .checkbox
+                        label
+                          input(type="checkbox" data-price="300" data-name="Тромбиновое время (ThrombinTime)" data-checkbox="40")
+                          .checkbox__cr
+                          .checkbox__text Тромбиновое время (ThrombinTime) - <span>300 рублей</span>
+                    .calc-fields__item
+                      .checkbox
+                        label
+                          input(type="checkbox" data-price="290" data-name="Фибриноген (Fibrinogen)" data-checkbox="41")
+                          .checkbox__cr
+                          .checkbox__text Фибриноген (Fibrinogen) - <span>290 рублей</span>
+                    .calc-fields__item
+                      .checkbox
+                        label
+                          input(type="checkbox" data-price="1080" data-name="D-димер(D-dimer)" data-checkbox="42")
+                          .checkbox__cr
+                          .checkbox__text D-димер(D-dimer) - <span>1080 рублей</span>
+                    .calc-fields__item
+                      .checkbox
+                        label
+                          input(type="checkbox" data-price="220" data-name="Активированное частичное тромбопластиновое время (Activated Partial Thromboplastin Time) — АЧТВ" data-checkbox="43")
+                          .checkbox__cr
+                          .checkbox__text Активированное частичное тромбопластиновое время (Activated Partial Thromboplastin Time) — АЧТВ - <span>220 рублей</span>
+        .calculator__selected
+          .calc-selected
+            .calc-selected__title: h2 Список анализов
+            .calc-selected__container(data-calc-selected)
+              //.calc-selected-item(data-id="43")
+              //  .calc-selected-item__info
+              //    .calc-selected-item__name Тестостерон
+              //    .calc-selected-item__price 440 ₽
+              //  .calc-selected-item__btn
+              //    button.calc-selected-item__close(data-remove-selected): svg(class="svg-icon" viewBox="0 0 16 16" width="14" height="14"): use(xlink:href="#svg-calc-cross")
+
+        .calculator__result
+          .calc-result
+            .calc-result__top
+              .calc-result__name Итого:
+              .calc-result__value <span data-calc-sum>0</span> ₽
+            .calc-result__buttons
+              .btn.btn-secondary(data-bs-toggle="modal" data-bs-target="#analyzesModal") Заказать
+              button.btn.btn-download
+                svg(class="svg-icon" viewBox="0 0 33 22" width="33" height="22"): use(xlink:href="#svg-download")
+                span Скачать список анализов
+
+        .calculator__block
+          include components/prepare-analyzes
+
+        .calculator__block
+          h2 Отзывы
+          include components/reviews/slider
+          a(href="reviews.html").btn.btn-more
+            span Смотреть все
+            svg(class="svg-icon" viewBox="0 0 19 13" width="19" height="13"): use(xlink:href="#svg-btn-arrow-right")
+
+  include components/map
+
+block footer
+  include layouts/footer

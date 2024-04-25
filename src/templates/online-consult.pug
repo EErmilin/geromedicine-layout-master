@@ -1,0 +1,117 @@
+extends layouts/main
+
+block header
+  include layouts/header
+
+block content
+  nav(aria-label="breadcrumb" class="breadcrumb-place" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);")
+    .container
+      ol.breadcrumb
+        li.breadcrumb-item: a(href="/"): svg(class="svg-icon" viewBox="0 0 14 14" width="14" height="14"): use(xlink:href="#svg-breadcrumb-home")
+        li.breadcrumb-item.active Онлайн консультация
+
+  .page__content
+    .container
+      .online-consult
+        .online-consult__header
+          .online-consult-header
+            .online-consult-header__container
+              .online-consult-header__info
+                .online-consult-header__title: h1 Онлайн консультация
+                .online-consult__form
+                  form.feedback-form
+                    .feedback-form__group
+                      .feedback-form__label Ваше имя<span>*</span>
+                      .feedback-form__field
+                        input(type="text" placeholder="Введите имя" class="form-control")
+                    .feedback-form__group
+                      .feedback-form__label Телефон<span>*</span>
+                      .feedback-form__field
+                        input(type="tel" class="form-control" placeholder="+7 (___) ___-__-__")
+                    .feedback-form__group
+                      .feedback-form__label E-mail<span>*</span>
+                      .feedback-form__field
+                        input(type="text" placeholder="Укажите Ваш e-mail" class="form-control")
+                    .feedback-form__group
+                      .feedback-form__label Врач
+                      .feedback-form__field
+                        select
+                          option Выберите специальность
+                          option Гериатр (Геронтолог)
+                          option Терапевт
+                          option Невролог
+                          option Кардиолог
+                          option Эндокринолог
+                          option Дерматовенеролог
+                          option Офтальмолог
+                          option Гинеколог
+                          option Уролог
+                    .feedback-form__info
+                      .feedback-form__policy
+                        .checkbox
+                          label
+                            input(type="checkbox" checked)
+                            .checkbox__cr
+                            .checkbox__text
+                              | Я согласен на обработку <a href="#">персональных данных</a>
+                      .feedback-form__required * Обязательные поля для заполнения
+                    .feedback-form__submit
+                      button(type="submit" class="btn btn-secondary") Оставить заявку
+
+
+              .online-consult-header__picture: img(src="images/doctor-signup-bg.jpg")
+
+        .online-consult__content.simple-text
+          h3 Инструкция по использованию онлайн-услуг
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut parturient id porta suspendisse. Arcu donec a ac ultricies. Congue lacus at urna, facilisis. Congue auctor vivamus fringilla vulputate enim eu faucibus egestas.
+          p Vel a eu, risus, semper sit eget ultrices. Enim consectetur ultricies porttitor convallis dignissim accumsan porttitor pretium. In pellentesque venenatis semper tristique. Risus tortor eget diam arcu nunc in sed nisl vulputate. Lacus amet imperdiet odio volutpat vulputate imperdiet. Commodo in erat adipiscing amet fermentum eget semper a magna. Venenatis ac, pretium mauris malesuada quam. Faucibus sed ullamcorper natoque euismod integer dictum malesuada faucibus. Maecenas vel sed blandit ultricies dui penatibus id convallis feugiat. Lorem imperdiet luctus enim, egestas. Ut ornare convallis aliquam egestas quis pharetra, tellus tincidunt ligula. Sed vitae arcu purus eu lacinia.
+          p Porttitor varius amet feugiat tincidunt pellentesque purus in. Nunc non malesuada ut eget. In commodo odio lorem bibendum vehicula. Ut nec risus id tortor at nulla vestibulum. Nec, eget in lacinia pretium convallis nam in dolor integer. Eget nisi tristique massa vitae viverra neque, eget. Non elementum scelerisque in tristique.
+          p Eleifend fermentum mauris eget id nisi commodo. Et blandit lacinia lacus, facilisi sem. Integer natoque leo lacus magna. Ultrices aliquet tristique duis tempus odio dui amet, facilisis. Aliquam enim mi orci semper neque mi quam. Elementum bibendum gravida ut odio lorem dignissim neque, in. Placerat.
+
+        .online-consult__block
+          .welfare
+            .welfare__title
+              h3 Преимущества
+            .welfare__content
+              ul
+                li Eleifend fermentum mauris eget id nisi commodo. Et blandit lacinia lacus, facilisi sem. Integer natoque leo lacus magna.
+                li Porttitor varius amet feugiat tincidunt pellentesque purus in. Nunc non malesuada ut eget. In commodo odio lorem bibendum vehicula.
+                li Aucibus sed ullamcorper natoque euismod integer dictum malesuada faucibus. Maecenas vel sed blandit ultricies dui penatibus id convallis feugiat.
+
+        .online-consult__block
+          .service-prices
+            .service-prices__title: h2 Наши цены
+            .service-prices__container
+              a.service-prices__item(href="#")
+                .service-prices__name Дистанционная консультация «Подготовка к очному приему» 15 мин.
+                .service-prices__cost 290 ₽
+              a.service-prices__item(href="#")
+                .service-prices__name Дистанционная консультация «Подготовка к очному приему» 30 мин.
+                .service-prices__cost 790 ₽
+              a.service-prices__item(href="#")
+                .service-prices__name Дистанционная консультация врача с корректировкой плана лечения
+                .service-prices__cost 790 ₽
+              a.service-prices__item(href="#")
+                .service-prices__name Дистанционная консультация «Консилиум» (с привлечением второго специалиста) 60 мин.
+                .service-prices__cost 2 000 ₽
+              a.service-prices__item(href="#")
+                .service-prices__name Дистанционная консультация 30 мин.
+                .service-prices__cost 990 ₽
+              a.service-prices__item(href="#")
+                .service-prices__name Дистанционная консультация врача 45 мин.
+                .service-prices__cost 1 490 ₽
+
+        .online-consult__block
+          include components/doctor-call
+
+        .online-consult__block
+          h2 Отзывы
+          include components/reviews/slider
+          a(href="reviews.html").btn.btn-more
+            span Смотреть все
+            svg(class="svg-icon" viewBox="0 0 19 13" width="19" height="13"): use(xlink:href="#svg-btn-arrow-right")
+
+  include components/map
+
+block footer
+  include layouts/footer

@@ -1,0 +1,33 @@
+.simple-text {
+  font-size: 14px;
+  @media(min-width: 1200px){
+    font-size: 16px;
+  }
+  ul, ol {
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+  ul {
+    li {
+      line-height: 1.4;
+
+      &::marker {
+        color: #FF6A29;
+      }
+    }
+  }
+  .green {
+    color: #93BB3E;
+  }
+  blockquote {
+    margin: 30px 0;
+  }
+  .welfare {
+    margin: 30px 0;
+  }
+
+  h2, h3 {
+    margin-top: 2rem;
+  }
+}

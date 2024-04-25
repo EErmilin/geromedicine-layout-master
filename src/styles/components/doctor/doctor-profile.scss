@@ -1,0 +1,13 @@
+.doctor-profile {
+  &__item {
+    margin: 0 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__name {
+    margin-right: 10px;
+  }
+  &__value {
+    font-weight: 600;
+  }
+}

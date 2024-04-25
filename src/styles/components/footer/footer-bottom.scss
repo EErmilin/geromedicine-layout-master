@@ -1,0 +1,40 @@
+.footer-bottom {
+  &__container {
+    @media(min-width: 576px){
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+  }
+  &__controls {
+    margin: 0 0 20px;
+    @media(min-width: 576px){
+      margin: 0;
+    }
+    @media(min-width: 992px){
+      display: flex;
+    }
+  }
+
+  &__search {
+    margin: 0 0 20px;
+    @media(min-width: 576px){
+      width: 230px;
+    }
+    @media(min-width: 992px){
+      margin: 0 25px 0 0;
+    }
+  }
+
+  &__buttons {
+    .c-btn {
+      &:not(:last-child){
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__social {
+    padding: 10px 0;
+  }
+}

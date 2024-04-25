@@ -1,0 +1,174 @@
+extends layouts/main
+
+block header
+  include layouts/header
+
+block content
+  nav(aria-label="breadcrumb" class="breadcrumb-place" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);")
+    .container
+      ol.breadcrumb
+        li.breadcrumb-item: a(href="/"): svg(class="svg-icon" viewBox="0 0 14 14" width="14" height="14"): use(xlink:href="#svg-breadcrumb-home")
+        li.breadcrumb-item.active О клинике
+
+  .page__content
+    .container
+      h1.page__title О клинике
+      .about-post
+        .about-post__content.simple-text
+          p Клиника для Детей и Взрослых на Открытом шоссе — это многопрофильная клиника, расположенная вблизи ст. м. Бульвар Рокоссовского. Услуги оказываются как в медицинском центре, так и на дому (в том числе за пределами МКАД).
+          p Прием ведется по направлениям: терапия, кардиология, гинекология, дерматовенерология, офтальмология, гериатрия, травматология, ортопедия, эндокринология, психиатрия, психотерапия, неврология.
+          p В клинике можно сделать УЗИ любых органов (эластография) на аппарате экспертного класса, пройти диагностику зрения на современном оборудовании, ЭКГ, Холтеровское мониторирование, сдать анализы (более 2000 исследований), капельницы для здоровья и красоты, записаться на лечебную физкультуру, пройти курс массажа. В клинике работают детские и взрослые массажисты.
+          p В клинике открыто новое направление – ПРОЕКТ: «ГЕРОМЕДИЦИНА» – специализированная медицинская помощь пациентам пожилого и старческого возраста. Доказано научно - у людей старшего возраста физиологические процессы протекают иначе, наблюдается сочетание одновременно несколько заболеваний, которые в своей совокупности могут очень сильно снизить качество и прогноз жизни пожилого человека, поэтому в клинике работают врачи и медсестры, которые прошли специальное обучение, в том числе за рубежом. Специалистами оказывается целый ряд профессиональных медицинских услуг не только в амбулаторном центре, но и на дому, что особенно удобно для пациента и его близких. Для лежачих, маломобильных пациентов, а также для больных с деменцией это может стать очень эффективным решением.
+          p Наши специалисты не только проведут диагностику и лечение, но и помогут наладить длительный уход за больным в домашних условиях. Часто активное лечение на дому способно заменить плановую госпитализацию и в итоге отказаться от сиделки. Все сотрудники работают в формате единой команды, состоящей из нескольких индивидуально подобранных для Вас специалистов. В клинике «Геромедицина» Вас ждёт радушный прием, чуткое отношение к Вашим проблемам и, конечно же, медицинский сервис высокого уровня, ведь здоровье и качество жизни пациента для нас всегда в приоритете.
+        .about-post__slider
+          .about-slider.swiper
+            .swiper-wrapper
+              .swiper-slide
+                .about-slide: img(src="images/about-slide-01.jpg")
+              .swiper-slide
+                .about-slide: img(src="images/about-slide-02.jpg")
+              .swiper-slide
+                .about-slide: img(src="images/about-slide-03.jpg")
+              .swiper-slide
+                .about-slide: img(src="images/about-slide-04.jpg")
+              .swiper-slide
+                .about-slide: img(src="images/about-slide-05.jpg")
+              .swiper-slide
+                .about-slide: img(src="images/about-slide-06.jpg")
+              .swiper-slide
+                .about-slide: img(src="images/about-slide-07.jpg")
+              .swiper-slide
+                .about-slide: img(src="images/about-slide-08.jpg")
+            .swiper-btn-prev
+              svg(class="svg-icon" viewBox="0 0 17 12" width="17" height="12"): use(xlink:href="#svg-slider-arrow-prev")
+            .swiper-btn-next
+              svg(class="svg-icon" viewBox="0 0 17 12" width="17" height="12"): use(xlink:href="#svg-slider-arrow-next")
+            .swiper-pagination.about-slider-pagination
+
+  section.section.section--activities
+    .container
+      .activities
+        .activities__bg
+        .activities__content
+          .activities__head
+            .activities__title Наши направления
+            .activities__tabs
+              ul.nav.nav-pills(id="pills-tab" role="tablist")
+                li.nav-item(role="presentations")
+                  button.nav-link.active(id="pills-reception-tab" data-bs-toggle="pill" data-bs-target="#pills-reception" type="button" role="tab" aria-controls="pills-reception" aria-selected="true") Прием в поликлинике
+                li.nav-item(role="presentations")
+                  button.nav-link(id="pills-doctor-tab" data-bs-toggle="pill" data-bs-target="#pills-doctor" type="button" role="tab" aria-controls="pills-doctor" aria-selected="false") Врач на дом
+                li.nav-item(role="presentations")
+                  button.nav-link(id="pills-diagnostics-tab" data-bs-toggle="pill" data-bs-target="#pills-diagnostics" type="button" role="tab" aria-controls="pills-diagnostics" aria-selected="false") Диагностика
+                li.nav-item(role="presentations")
+                  button.nav-link(id="pills-analyzes-tab" data-bs-toggle="pill" data-bs-target="#pills-analyzes" type="button" role="tab" aria-controls="pills-analyzes" aria-selected="false") Анализы
+                li.nav-item(role="presentations")
+                  button.nav-link(id="pills-ultrasound-tab" data-bs-toggle="pill" data-bs-target="#pills-ultrasound" type="button" role="tab" aria-controls="pills-ultrasound" aria-selected="false") УЗИ
+          .activities__container
+            .activities__tab-content.scrollbar
+              .tab-content(id="pills-tabContent")
+                .tab-pane.fade.show.active(id="pills-reception" role="tabpanel" aria-labelledby="pills-reception-tab")
+                  ul.activities__list
+                    li.activities__item
+                      a(href="#").activities__link Биоревитализация
+                    li.activities__item
+                      a(href="#").activities__link Внутрисуставные инъекции с гиалуроновой кислотой
+                    li.activities__item
+                      a(href="#").activities__link Гастроэнтеролог
+                    li.activities__item
+                      a(href="#").activities__link Гериатр
+                    li.activities__item
+                      a(href="#").activities__link Гинеколог
+                    li.activities__item
+                      a(href="#").activities__link Дерматовенеролог
+                    li.activities__item
+                      a(href="#").activities__link Инъекционная косметология
+                    li.activities__item
+                      a(href="#").activities__link Капельницы после COVID-19
+                    li.activities__item
+                      a(href="#").activities__link Кардиолог
+                    li.activities__item
+                      a(href="#").activities__link Контурная пластика
+                    li.activities__item
+                      a(href="#").activities__link Косметические процедуры
+                    li.activities__item
+                      a(href="#").activities__link Косметический массаж
+                    li.activities__item
+                      a(href="#").activities__link Лечение акне
+                    li.activities__item
+                      a(href="#").activities__link Лечение гипергидроза
+                    li.activities__item
+                      a(href="#").activities__link Мезонити
+                    li.activities__item
+                      a(href="#").activities__link Мезотерапия
+                    li.activities__item
+                      a(href="#").activities__link Невролог
+                    li.activities__item
+                      a(href="#").activities__link Озонотерапия
+                    li.activities__item
+                      a(href="#").activities__link Отоларинголог
+                    li.activities__item
+                      a(href="#").activities__link Офтальмолог
+                    li.activities__item
+                      a(href="#").activities__link Паравертебральные блокады
+                    li.activities__item
+                      a(href="#").activities__link Прием врача-косметолога
+                    li.activities__item
+                      a(href="#").activities__link Психиатр
+                    li.activities__item
+                      a(href="#").activities__link Терапевт
+
+                .tab-pane.fade(id="pills-doctor" role="tabpanel" aria-labelledby="pills-doctor-tab")
+                  p Вкладка Врач на дом
+                .tab-pane.fade(id="pills-diagnostics" role="tabpanel" aria-labelledby="pills-diagnostics-tab")
+                  p Вкладка Диагностика
+                .tab-pane.fade(id="pills-analyzes" role="tabpanel" aria-labelledby="pills-analyzes-tab")
+                  p Вкладка Анализы
+                .tab-pane.fade(id="pills-ultrasound" role="tabpanel" aria-labelledby="pills-ultrasound-tab")
+                  p Вкладка УЗИ
+
+
+
+  section.section.section--reviews
+    .container
+      .section__head
+        .section__title Отзывы
+      .section__content
+        include components/reviews/slider
+      .section__bottom
+        a(href="reviews.html").btn.btn-more
+          span Смотреть все
+          svg(class="svg-icon" viewBox="0 0 19 13" width="19" height="13"): use(xlink:href="#svg-btn-arrow-right")
+
+  section.section.section--stock
+    .container
+      .section__head
+        .section__title Акции и спецпредложения
+      .section__content
+        .stock-list
+          .stock-list__container
+            .stock-list__item
+              a(href="stock-detail.html").stock-card
+                .stock-card__picture: img(src="images/promo_1.jpg")
+                .stock-label.stock-label--red Акция
+            .stock-list__item
+              a(href="stock-detail.html").stock-card
+                .stock-card__picture: img(src="images/promo_2.jpg")
+                .stock-label.stock-label--red Акция
+            .stock-list__item
+              a(href="stock-detail.html").stock-card
+                .stock-card__picture: img(src="images/promo_3.jpg")
+                .stock-label.stock-label--red Акция
+            .stock-list__item
+              a(href="stock-detail.html").stock-card
+                .stock-card__picture: img(src="images/promo_4.jpg")
+                .stock-label.stock-label--red Акция
+      .section__bottom
+        a(href="#").btn.btn-more
+          span Все акции
+          svg(class="svg-icon" viewBox="0 0 19 13" width="19" height="13"): use(xlink:href="#svg-btn-arrow-right")
+
+  include components/map
+
+block footer
+  include layouts/footer

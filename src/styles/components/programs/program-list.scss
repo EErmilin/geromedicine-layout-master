@@ -1,0 +1,29 @@
+.program-list {
+  &__search {
+    max-width: 350px;
+    margin: 0 0 25px;
+  }
+  &__tags {
+    margin: 0 0 30px;
+    .program-tags {
+      margin: 0 0 20px;
+    }
+  }
+  &__item {
+    margin: 0 0 30px;
+    padding: 0 0 30px;
+    border-bottom: 1px solid #D8D8DC;
+  }
+  &__pagination {
+    padding-top: 10px;
+  }
+}
+
+.program-tags {
+  &--selected {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+}

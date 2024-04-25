@@ -1,0 +1,21 @@
+- let arMainMenu = [{name: "Главная", href: "/"}, {name: "Блог", href: "blog.html"}, {name: "Контакты", href: "contacts.html"}]
+- let isMainPage = false;
+block vars
+
+doctype html
+html(lang='en')
+  head
+    include ../global/head
+  body.page.page--new-year
+    include ../components/svg_icons
+    .page__wrapper
+      block header
+
+
+      main.page__main
+        block content
+
+      block footer
+
+    include ../components/socket-panel
+    include ../components/modals/modal

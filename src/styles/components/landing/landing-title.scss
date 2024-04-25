@@ -1,0 +1,8 @@
+.landing-title {
+  font-size: 30px;
+  line-height: 1.2;
+  @media(min-width: 1200px){
+    font-size: 36px;
+    margin: 0 0 35px;
+  }
+}

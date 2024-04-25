@@ -1,0 +1,76 @@
+extends layouts/main
+
+block header
+  include layouts/header
+
+block content
+  nav(aria-label="breadcrumb" class="breadcrumb-place")
+    .container
+      ol.breadcrumb
+        li.breadcrumb-item: a(href="/"): svg(class="svg-icon" viewBox="0 0 14 14" width="14" height="14"): use(xlink:href="#svg-breadcrumb-home")
+        li.breadcrumb-item: a(href="stock.html") Акции
+        li.breadcrumb-item.active Озонотерапия - скидка 50% на первую процедуру
+  .page__content
+    .container
+      .stock-post
+        .stock-post__header
+          .stock-header
+            .stock-header__container
+              .stock-header__info
+                .stock-label.stock-label--red Акция
+                .stock-header__top
+                  h1 Озонотерапия - скидка 50% на первую процедуру
+                  p Добавить описание можно в обычном азаце тут
+                .stock-header__bottom
+                  a(href="#").btn.btn-secondary Записаться на прием
+              .stock-header__picture
+                img(src="images/stock-detail-picture.png")
+
+        .stock-post__content.simple-text
+          h3 Скидка 50% + бесплатная консультация!
+          p Озонотерапия используется во многих областях, благодаря своим свойствам, помогающим при самых разнообразных проблемах.
+          p Озон противостоит воспалительным процессам, вирусам, грибкам и бактериям, используется как дезинфицирующее и анестезирующее средство, насыщает организм кислородом, способствует улучшению кровообращения, расщепляет жиры и помогает восстановлению организма.
+          p При прохождении озонотерапии вы получаете скидку в 50% на первую процедуру и бесплатную консультацию врача в день процедуры.
+
+        .stock-post__recommend
+          h2 Также рекомендуем обследования
+          .recommend-list
+            .recommend-list__container
+              .recommend-list__item
+                a(href="service-detail.html").service-card
+                  .service-card__picture: img(src="images/service-card-01.png")
+                  .service-card__info
+                    .service-card__name Косметический массаж
+              .recommend-list__item
+                a(href="service-detail.html").service-card
+                  .service-card__picture: img(src="images/service-card-02.png")
+                  .service-card__info
+                    .service-card__name Химический пилинг
+              .recommend-list__item
+                a(href="service-detail.html").service-card
+                  .service-card__picture: img(src="images/service-card-03.png")
+                  .service-card__info
+                    .service-card__name Косметические маски
+              .recommend-list__item
+                a(href="service-detail.html").service-card
+                  .service-card__picture: img(src="images/service-card-04.png")
+                  .service-card__info
+                    .service-card__name Ультразвуковая чистка
+
+        .stock-post__doctor-call
+          include components/doctor-call
+
+        .stock-post__reviews
+          h2 Отзывы
+          include components/reviews/slider
+          a(href="reviews.html").btn.btn-more
+            span Смотреть все
+            svg(class="svg-icon" viewBox="0 0 19 13" width="19" height="13"): use(xlink:href="#svg-btn-arrow-right")
+
+
+
+
+  include components/map
+
+block footer
+  include layouts/footer

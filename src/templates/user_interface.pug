@@ -1,0 +1,49 @@
+extends layouts/main
+
+block header
+  include layouts/header
+
+block content
+  section.section-ui
+    .container
+      .ui-list
+        .ui-list__item
+          .ui-item
+            .ui-item__title Selectric
+            .ui-item__content
+              p Взято тут <a href="http://selectric.js.org/">http://selectric.js.org/</a>
+              select
+                option Опция 1
+                option Опция 2
+                option Опция 3
+        .ui-list__item
+          .ui-item
+            .ui-item__title Selectric disabled
+            .ui-item__content
+              select(disabled)
+                option Опция 1
+                option Опция 2
+                option Опция 3
+        .ui-list__item
+          .ui-item
+            .ui-item__title Rating
+            .ui-item__content
+              include components/rating/rating-area
+
+        .ui-list__item
+          .ui-item
+            .ui-item__title Simple text
+            .ui-item__content
+              p Рейтинг, не меняя концепции, изложенной выше, продуцирует медиабизнес. <strong>Инвестиционный продукт</strong>, в рамках сегодняшних воззрений, неоднозначен. Воздействие на потребителя, не меняя концепции, изложенной выше, концентрирует анализ зарубежного опыта. Рыночная информация стабилизирует социометрический системный анализ, опираясь на опыт западных коллег. Общество потребления стабилизирует медиавес. Медиабизнес программирует межличностный рекламный бриф, отвоевывая свою долю рынка.
+              p Презентационный материал синхронизирует имидж, отвоевывая рыночный сегмент. Рейт-карта детерминирует рекламный бриф. Точечное воздействие сознательно раскручивает имидж. В рамках концепции Акоффа и Стэка, баланс спроса и предложения усиливает связанный баинг и селлинг.
+
+  section.user-section
+    .container
+  section.buttons(style="padding: 30px 0")
+    .container
+      button(type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal") Открыть модаль
+
+  include components/modals/example_modal
+
+block footer
+  include layouts/footer

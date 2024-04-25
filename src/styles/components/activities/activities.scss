@@ -1,0 +1,118 @@
+.activities {
+  padding: 20px 0;
+  position: relative;
+  @media(min-width: 768px){
+    padding: 50px 0;
+  }
+
+  &__bg {
+    @media(min-width: 1200px){
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: url("../images/activities_bg.png") 0 bottom no-repeat;
+    }
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__head, &__container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+    align-items: center;
+  }
+  &__head {
+    margin: 0 -10px 20px -10px;
+    @media(min-width: 576px){
+      margin: 0 -10px 30px -10px;
+    }
+  }
+  &__container {
+    justify-content: flex-end;
+  }
+  &__title, &__tabs, &__picture, &__tab-content {
+    padding: 0 10px;
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+  &__title, &__picture {
+    @media(min-width: 1200px){
+      max-width: 30%;
+      flex: 0 0 30%;
+    }
+    @media(min-width: 1400px){
+      max-width: 40%;
+      flex: 0 0 40%;
+    }
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 15px;
+    @media(min-width: 1200px){
+      font-size: 30px;
+    }
+    @media(min-width: 1200px){
+      margin: 0;
+    }
+  }
+  &__tabs, &__tab-content {
+    @media(min-width: 1200px){
+      max-width: 70%;
+      flex: 0 0 70%;
+    }
+    @media(min-width: 1400px){
+      max-width: 60%;
+      flex: 0 0 60%;
+    }
+  }
+  &__container {
+
+  }
+  &__picture {
+    display: none;
+    @media(min-width: 1200px){
+      display: block;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+  &__tab-content {
+    @media(min-width: 576px){
+      max-height: 450px;
+      overflow-y: auto;
+    }
+  }
+  &__list {
+    column-count: 1;
+    @media(min-width: 768px){
+      column-count: 2;
+    }
+  }
+  &__item {
+    line-height: 1.2;
+    font-size: 16px;
+    margin: 0 20px 0 0;
+    padding: 8px 0;
+    list-style-image: url("../images/green-bullit.svg");
+    @media(min-width: 576px){
+      padding: 10px 0;
+    }
+    &::marker {
+      color: #93BB3E;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+      color: inherit;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+mixin program-card(data)
+  .program-card
+    if data.stock === true
+      .stock-label.stock-label--red Акция
+    .program-card__container
+      .program-card__media
+        .program-card__img: a(href="program.html"): img(src=data.image)
+      .program-card__info
+        .program-card__top
+          .program-card__title= data.title
+          .program-card__description= data.description
+        .program-card__bottom
+          .program-card__tags
+            if data.tags.length
+              .chips
+                .chips__container
+                  each tag, index in data.tags
+                    .chips__item
+                      .chips__tag
+                        span= tag.name
+          .program-card__controls
+            if data.price.length || data.old_price.length
+              .program-card__prices
+                if data.old_price.length
+                  .program-card-price.old=data.old_price
+                if data.price.length
+                  .program-card-price.current=data.price
+            .program-card__btn
+              a(href="program.html").btn.btn-outline-primary Подробнее

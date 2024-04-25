@@ -1,0 +1,116 @@
+.modal-form {
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+    .modal-form {
+      &__info, &__submit {
+        margin: 20px 0 0;
+      }
+    }
+  }
+  &__column {
+    width: 100%;
+    padding: 0 10px;
+    max-width: 100%;
+    flex: 0 0 100%;
+    @media(min-width: 992px){
+      max-width: 50%;
+      flex: 0 0 50%;
+    }
+  }
+  &__group {
+    display: flex;
+    margin: 0 -5px 12px -5px;
+    align-items: center;
+    flex-direction: column;
+    @media(min-width: 640px){
+      flex-direction: row;
+    }
+  }
+  &__label, &__field {
+    width: 100%;
+    padding: 0 5px;
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+  &__label {
+    font-weight: 600;
+    margin: 0 0 5px;
+    line-height: 1.4;
+    span {
+      color: #FF6A29;
+    }
+    @media(min-width: 640px){
+      margin: 0;
+      max-width: 140px;
+      flex: 0 0 140px;
+    }
+  }
+
+  &__field {
+    @media(min-width: 640px){
+      max-width: 100%;
+      width: 100%;
+      flex: 0 2 100%;
+    }
+  }
+
+  &__info {
+    margin: 15px 0 0;
+    @media(min-width: 576px){
+      margin: 25px 0 0;
+    }
+  }
+
+  &__policy {
+    margin: 0 0 7px;
+    .checkbox {
+      &__text {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__required {
+    font-size: 14px;
+    opacity: 0.5;
+  }
+
+  &__submit {
+    margin: 15px 0 0;
+    @media(min-width: 576px){
+      margin: 35px 0 0;
+    }
+    .btn {
+      width: 100%;
+    }
+  }
+
+  &__calendar {
+    .datepicker, .ui-datepicker {
+      width: 100%;
+    }
+  }
+
+  &__message {
+    margin: 20px 0 0;
+  }
+
+  &__worktime {
+    margin: 10px 0 0;
+  }
+
+}
+
+.gr-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+  &__col {
+    width: 100%;
+    padding: 0 5px;
+    max-width: 50%;
+    flex: 0 0 50%;
+  }
+}

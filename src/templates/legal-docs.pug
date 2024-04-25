@@ -1,0 +1,67 @@
+extends layouts/main
+
+block header
+  include layouts/header
+
+block content
+  nav(aria-label="breadcrumb" class="breadcrumb-place" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);")
+    .container
+      ol.breadcrumb
+        li.breadcrumb-item: a(href="/"): svg(class="svg-icon" viewBox="0 0 14 14" width="14" height="14"): use(xlink:href="#svg-breadcrumb-home")
+        li.breadcrumb-item: a(href="about.html") О клинике
+        li.breadcrumb-item.active Лицензии и документы
+
+  .page__content
+    .container
+      h1.page__title Лицензии и документы
+      .docs-list
+        .docs-list__container
+          .docs-list__item
+            a(href="#").doc-card.doc-card--red
+              .doc-card__icon: svg(class="svg-icon" viewBox="0 0 28 38" width="28" height="38"): use(xlink:href="#svg-document")
+              .doc-card__name Прейскурант на медицинские услуги
+          .docs-list__item
+            a(href="#").doc-card.doc-card--red
+              .doc-card__icon: svg(class="svg-icon" viewBox="0 0 28 38" width="28" height="38"): use(xlink:href="#svg-document")
+              .doc-card__name Лицензия КДВ на открытом шоссе
+          .docs-list__item
+            a(href="#").doc-card.doc-card--red
+              .doc-card__icon: svg(class="svg-icon" viewBox="0 0 28 38" width="28" height="38"): use(xlink:href="#svg-document")
+              .doc-card__name Свидетельство налоговая КДВ
+
+      .docs-list
+        .docs-list__title: h2 Правовая информация
+        .docs-list__container
+          .docs-list__item
+            a(href="#").doc-card.doc-card--green
+              .doc-card__icon: svg(class="svg-icon" viewBox="0 0 28 38" width="28" height="38"): use(xlink:href="#svg-document")
+              .doc-card__name Инф. согласие на мед вмешательство и обработку данных КДВ
+          .docs-list__item
+            a(href="#").doc-card.doc-card--green
+              .doc-card__icon: svg(class="svg-icon" viewBox="0 0 28 38" width="28" height="38"): use(xlink:href="#svg-document")
+              .doc-card__name Политика конфиденциальности
+          .docs-list__item
+            a(href="#").doc-card.doc-card--green
+              .doc-card__icon: svg(class="svg-icon" viewBox="0 0 28 38" width="28" height="38"): use(xlink:href="#svg-document")
+              .doc-card__name Публичное предлож. клиники О ЗАКЛЮЧЕНИИ ДОГОВОРА ОКАЗАНИЯ ПЛАТНЫХ МЕДИЦИНСКИХ УСЛУГ КДВ
+          .docs-list__item
+            a(href="#").doc-card.doc-card--green
+              .doc-card__icon: svg(class="svg-icon" viewBox="0 0 28 38" width="28" height="38"): use(xlink:href="#svg-document")
+              .doc-card__name Закон о защите прав потребителей
+          .docs-list__item
+            a(href="#").doc-card.doc-card--green
+              .doc-card__icon: svg(class="svg-icon" viewBox="0 0 28 38" width="28" height="38"): use(xlink:href="#svg-document")
+              .doc-card__name ОБ ОСНОВАХ ОХРАНЫ ЗДОРОВЬЯ ГРАЖДАН
+          .docs-list__item
+            a(href="#").doc-card.doc-card--green
+              .doc-card__icon: svg(class="svg-icon" viewBox="0 0 28 38" width="28" height="38"): use(xlink:href="#svg-document")
+              .doc-card__name ОБ ОБЯЗАТЕЛЬНОМ МЕДИЦИНСКОМ СТРАХОВАНИИ В РФ
+          .docs-list__item
+            a(href="#").doc-card.doc-card--green
+              .doc-card__icon: svg(class="svg-icon" viewBox="0 0 28 38" width="28" height="38"): use(xlink:href="#svg-document")
+              .doc-card__name ОБ УТВЕРЖДЕНИИ ПРАВИЛ ПРЕДОСТАВЛЕНИЯ МЕДИЦИНСКИМИ ОРГАНИЗАЦИЯМИ ПЛАТНЫХ МЕДИЦИНСКИХ УСЛУГ
+
+  include components/map
+
+block footer
+  include layouts/footer

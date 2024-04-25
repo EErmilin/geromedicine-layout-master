@@ -1,0 +1,27 @@
+.promo-slider {
+  position: relative;
+
+  &:hover {
+    .swiper-btn-prev, .swiper-btn-next {
+      opacity: 1;
+    }
+  }
+
+  .swiper-btn-prev, .swiper-btn-next {
+    position: absolute;
+    top: 45%;
+    opacity: 0;
+  }
+
+  .swiper-btn-prev {
+    left: 5px;
+  }
+
+  .swiper-btn-next {
+    right: 5px;
+  }
+}
+
+.promo-slider-place {
+  background: rgba(247, 247, 247, 1);
+}

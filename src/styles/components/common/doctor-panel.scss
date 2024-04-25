@@ -1,0 +1,126 @@
+.doctor-panel {
+  background: #F5F5F5;
+  overflow: hidden;
+  padding: 20px;
+  margin: 0 -15px;
+  position: relative;
+
+  @media(min-width: 576px){
+    margin: 0;
+    border-radius: 10px;
+  }
+  @media(min-width: 1200px){
+    h1 {
+      font-size: 30px;
+    }
+  }
+
+  &__container {
+    @media(min-width: 992px){
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__info, &__picture {
+    @media(min-width: 992px){
+      width: 100%;
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
+  }
+
+  &__info {
+    padding: 20px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media(min-width: 992px) {
+      padding: 15px 20px 0 30px;
+      max-width: 80%;
+      flex: 0 0 80%;
+    }
+  }
+
+  &__picture {
+    max-width: 300px;
+    flex: 0 0 300px;
+    @media(min-width: 992px) {
+      max-width: 20%;
+      flex: 0 0 20%;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__img {
+    position: relative;
+    padding-top: 120%;
+    border-radius: 4px;
+    overflow: hidden;
+    img {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__top {
+    .doctor-price {
+      padding-top: 10px;
+    }
+  }
+
+  &__profile {
+    &___item {
+      margin: 0 0 10px;
+      display: flex;
+      flex-wrap: wrap;
+      &-name {
+        margin-right: 10px;
+      }
+      &-value {
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__prices {
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    &-title {
+      margin-right: 10px;
+    }
+    &-value {
+      font-size: 20px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      span {
+        &:first-child {
+          font-size: 16px;
+          margin-right: 10px;
+          font-weight: 500;
+          text-decoration: line-through;
+        }
+        &:last-child {
+          font-size: 20px;
+          color: #FF6A29;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    padding: 20px 0 0;
+  }
+
+  .stock-label {
+    z-index: 1;
+  }
+}

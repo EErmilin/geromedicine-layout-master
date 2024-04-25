@@ -1,0 +1,116 @@
+extends layouts/main
+
+block header
+  include layouts/header
+
+block content
+  nav(aria-label="breadcrumb" class="breadcrumb-place")
+    .container
+      ol.breadcrumb
+        li.breadcrumb-item: a(href="/"): svg(class="svg-icon" viewBox="0 0 14 14" width="14" height="14"): use(xlink:href="#svg-breadcrumb-home")
+        li.breadcrumb-item: a(href="doctors.html") Врачи
+        li.breadcrumb-item.active Цупко Игорь викторович
+  .page__content
+    .container
+      .doctor-post
+        .doctor-post__header
+          .doctor-header
+            .doctor-header__container
+              .doctor-header__picture
+                .doctor-header__img: img(src="images/doctor_01.png")
+              .doctor-header__info
+                .doctor-header__top
+                  h1 Цупко Игорь Викторович
+                  .doctor-profile
+                    .doctor-profile__item
+                      .doctor-profile__name Должность:
+                      .doctor-profile__value Терапевт, кардиолог, гериатр, к.м.н.
+                    .doctor-profile__item
+                      .doctor-profile__name Стаж:
+                      .doctor-profile__value 24 года
+                    .doctor-profile__item
+                      .doctor-profile__name Специализация:
+                      .doctor-profile__value Врач - терапевт, кардиолог, гериатр.
+                    .doctor-profile__item
+                      .doctor-profile__name Степень:
+                      .doctor-profile__value Кандидат медицинских наук
+
+                  .doctor-price
+                    .doctor-price__name Стоимость приема:
+                    .doctor-price__value от 1 700 ₽
+
+                .doctor-header__bottom
+                  a(href="#").btn.btn-secondary Запись на прием
+
+        .doctor-post__content.simple-text
+          h3 Образование:
+          ul
+            li 1991 - 1997 гг. — диплом врача по специальности «лечебное дело» - лечебный факультет Кубанской государственной медицинской Академии;
+            li 1997 - 2000 гг. — интернатура и клиническая ординатура - кафедра факультетской терапии и клинической фармакологии Кубанской государственной медицинской академии по специальности «терапия»;
+            li 2000 - 2003 гг. — очная аспирантура (РУДН, г. Москва) по специальности «кардиология».
+          p Имеет большой опыт работы на «скорой помощи», в реанимационных блоках, приемных отделениях крупных клинических центров, заведовании терапевтическими отделениями; многолетняя практика в руководстве амбулаторными центрами.
+          h3 Повышение квалификации
+          p Действующие сертификаты и удостоверения:
+          ul
+            li по специальности «терапия»;
+            li по специальности «кардиология»;
+            li по специальности «гериатрия»;
+            li по специальности «пульмонология».
+          p Участвовал в международных и междисциплинарных конгрессах в качестве докладчика.
+          h3 Профессиональные навыки/диагностика/лечение:
+          ul
+            li оказание экстренной помощи;
+            li коррекция при неэффективности ранее назначенного лечения;
+            li диагностика и лечение сложных клинических случаев;
+            li профессиональные консультации и оптимизация лечения пациентам старшей возрастной группы (возраст 60+);
+            li подготовка к оперативным вмешательствам;
+            li профилактическая медицина;
+            li семейная медицина;
+            li медицинское сопровождение VIP-клиентов.
+          h3 Болезни, которые лечит врач:
+          ul
+            li Все заболевания сердечно-сосудистой системы (в т.ч. артериальная гипертония, сердечная недостаточность, ИБС, аритмии и др.).
+            li Отечный синдром различного генеза.
+            li Патология желудочно-кишечного такта (в т.ч. гастриты, язвы, панкреатит, колиты и др.).
+            li Заболевания легких (в т.ч. бронхиальная астма, бронхит, ХОБЛ и др.);
+            li Болезни мочеполовой системы (терапевтические аспекты).
+
+        .doctor-post__block
+          .service-prices
+            .service-prices__title: h2 Услуги
+            .service-prices__container
+              a.service-prices__item(href="service-detail.html")
+                .service-prices__name Прием врача-терапевта на дому
+                .service-prices__cost от 2 900 ₽
+              a.service-prices__item(href="service-detail.html")
+                .service-prices__name Прием врача-терапевта в медицинском центре
+                .service-prices__cost от 1 700 ₽
+              a.service-prices__item(href="service-detail.html")
+                .service-prices__name Выездная первичная консультация терапевта
+                .service-prices__cost 7 150 ₽
+
+        .doctor-post__block
+          .doctor-signup
+            .doctor-signup__container
+              .doctor-signup__info
+                .doctor-signup__top
+                  h2 Записаться на прием
+                  p К доктору: <strong>Цупко Игорь Викторович</strong>
+                .doctor-signup__bottom
+                  a(href="#").btn.btn-secondary Запись на прием
+              .doctor-signup__picture: img(src="images/doctor-signup-bg.jpg")
+
+        .doctor-post__block
+          h2 Отзывы
+          include components/reviews/slider
+          a(href="reviews.html").btn.btn-more
+            span Смотреть все
+            svg(class="svg-icon" viewBox="0 0 19 13" width="19" height="13"): use(xlink:href="#svg-btn-arrow-right")
+
+
+
+
+  include components/map
+
+block footer
+  include layouts/footer

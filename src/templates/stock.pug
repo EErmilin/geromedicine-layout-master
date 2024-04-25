@@ -1,0 +1,39 @@
+extends layouts/main
+
+block header
+  include layouts/header
+
+block content
+  nav(aria-label="breadcrumb" class="breadcrumb-place")
+    .container
+      ol.breadcrumb
+        li.breadcrumb-item: a(href="/"): svg(class="svg-icon" viewBox="0 0 14 14" width="14" height="14"): use(xlink:href="#svg-breadcrumb-home")
+        li.breadcrumb-item.active Акции
+  .page__content
+    .container
+      h1.page__title Акции
+      .stock-list
+        .stock-list__container
+          .stock-list__item
+            a(href="stock-detail.html").stock-card
+              .stock-card__picture: img(src="images/promo_1.jpg")
+              .stock-label.stock-label--red Акция
+          .stock-list__item
+            a(href="stock-detail.html").stock-card
+              .stock-card__picture: img(src="images/promo_2.jpg")
+              .stock-label.stock-label--red Акция
+          .stock-list__item
+            a(href="stock-detail.html").stock-card
+              .stock-card__picture: img(src="images/promo_3.jpg")
+              .stock-label.stock-label--red Акция
+          .stock-list__item
+            a(href="stock-detail.html").stock-card
+              .stock-card__picture: img(src="images/promo_4.jpg")
+              .stock-label.stock-label--red Акция
+        .stock-list__pagination
+          include components/pagination
+
+  include components/map
+
+block footer
+  include layouts/footer

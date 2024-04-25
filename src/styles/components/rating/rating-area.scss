@@ -1,0 +1,42 @@
+.rating-area {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  margin: 0 10px 0 0;
+
+  &__item {
+    font-size: 20px;
+    &::before {
+      content: '★';
+    }
+  }
+  &[data-rating="2"]{
+    .rating-area__item:nth-child(2){
+      color: #EA670C;
+    }
+  }
+}
+.rating-area:not(:checked) > input {
+  display: none;
+}
+.rating-area > label {
+  margin: 0;
+}
+.rating-area:not(:checked) > label {
+  width: 24px;
+  padding: 0;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 24px;
+  color: #D6DEE9;
+}
+.rating-area:not(:checked) > label:before {
+  content: '★';
+}
+.rating-area > input:checked ~ label {
+  color: #EA670C;
+}
+.rating-area:not(:checked) > label:hover,
+.rating-area:not(:checked) > label:hover ~ label {
+  color: #EA670C;
+}

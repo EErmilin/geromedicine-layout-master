@@ -1,0 +1,10 @@
+.ui-datepicker {
+  &-next {
+    background: url("../images/ui-icon-calendar-next.svg") center center no-repeat !important;
+    border: none !important;
+  }
+  &-prev {
+    background: url("../images/ui-icon-calendar-prev.svg") center center no-repeat !important;
+    border: none !important;
+  }
+}

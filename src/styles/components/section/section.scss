@@ -1,0 +1,52 @@
+.section-ui {
+  padding: 20px 0;
+}
+
+.section {
+  padding: 25px 0;
+  @media(min-width: 576px){
+    padding: 50px 0;
+  }
+  &__head {
+    margin: 0 0 15px;
+    @media(min-width: 576px){
+      margin: 0 0 30px;
+    }
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    @media(min-width: 576px){
+      font-size: 30px;
+    }
+  }
+  &__bottom {
+
+  }
+  &--activities, &--stock {
+    background: #f5f5f5;
+  }
+  &--activities, &--advantages {
+    padding: 0;
+  }
+  &--doctors {
+    .btn-more {
+      margin: 0 0 20px;
+    }
+  }
+
+  &--reviews {
+    .section {
+      &__head {
+        margin: 0 0 5px;
+        @media(min-width: 576px){
+          margin: 0 0 15px;
+        }
+      }
+    }
+    & + .section--news{
+      padding-top: 0;
+    }
+  }
+
+}

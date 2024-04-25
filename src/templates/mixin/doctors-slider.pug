@@ -1,0 +1,29 @@
+mixin doctors-slider(data)
+  .doctors-slider.swiper
+    .swiper-wrapper
+      if data.items.length
+        each item, index in data.items
+          .swiper-slide
+            .doctor-card
+              if item.stock === true
+                .stock-label.stock-label--red Акция
+              .doctor-card__image: img(src=item.image)
+              .doctor-card__info
+                .doctor-card__name=item.name
+                .doctor-card__position=item.position
+                .doctor-card__bottom
+                  if item.price_old.length
+                    .doctor-card__price
+                      span=item.price_old
+                      span=item.price
+                  else
+                    .doctor-card__price=span=item.price
+                  if item.order_btn === true
+                    .doctor-card__btn
+                      .btn.btn-secondary(data-bs-toggle="modal" data-bs-target="#doctorAppointmentModal") Запись на прием
+              a(href="doctor-detail.html").doctor-card__link
+
+    .swiper-btn-prev
+      svg(class="svg-icon" viewBox="0 0 17 12" width="17" height="12"): use(xlink:href="#svg-slider-arrow-prev")
+    .swiper-btn-next
+      svg(class="svg-icon" viewBox="0 0 17 12" width="17" height="12"): use(xlink:href="#svg-slider-arrow-next")

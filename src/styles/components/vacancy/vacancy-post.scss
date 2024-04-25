@@ -1,0 +1,16 @@
+.vacancy-post {
+  &__header {
+    margin: 0 0 40px;
+    @media(min-width: 1200px){
+      h1 {
+        font-size: 30px;
+      }
+    }
+  }
+  &__content {
+    margin: 0 0 40px;
+  }
+  &__block {
+    margin: 0 0 40px;
+  }
+}

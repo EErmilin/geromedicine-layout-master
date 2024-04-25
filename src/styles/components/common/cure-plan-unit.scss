@@ -1,0 +1,38 @@
+.cure-plan-unit {
+  padding: 28px 20px;
+  background: #F6F9E9;
+  border-radius: 10px;
+  border: 1px solid #EDF1D3;
+  @media(min-width: 768px) {
+    display: flex;
+    align-items: center;
+    padding: 35px 50px;
+  }
+
+  &__icon {
+    margin: 0 0 20px;
+    text-align: center;
+    @media(min-width: 768px) {
+      margin: 0 30px 0 0;
+      text-align: initial;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.2;
+    @media(min-width: 1200px) {
+      font-size: 20px;
+    }
+
+    p {
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    strong {
+      color: #93BB3E;
+    }
+  }
+}

@@ -1,0 +1,275 @@
+extends layouts/main
+include mixin/program-card
+include mixin/doctors-slider
+
+block header
+  include layouts/header
+
+block content
+  nav(aria-label="breadcrumb" class="breadcrumb-place")
+    .container
+      ol.breadcrumb
+        li.breadcrumb-item: a(href="/"): svg(class="svg-icon" viewBox="0 0 14 14" width="14" height="14"): use(xlink:href="#svg-breadcrumb-home")
+        li.breadcrumb-item: a(href="programs.html") Программы
+        li.breadcrumb-item.active Программы выходного дня
+  .page__content
+    .container
+      .landing
+        h1.landing-title Программы выходного дня
+        .landing-header
+          .landing-header__info
+            .landing-header__top
+              .landing-header__title Check-up для пожилого человека (возраст 65+)
+              p Люди пожилого и старческого возраста (в отличие от более молодых) имеют множество заболеваний и проблем, которые являются причиной плохого самочувствия и значительного снижения качества их жизни.
+            .landing-header__bottom
+              a(href="#").btn.btn-secondary Позвонить
+          .landing-header__picture
+            img(src="images/landing-header.jpg")
+
+        .landing-unit
+          .landing-text
+            h3 Кому требуется программа «Борьба с лишним весом»
+            p Несмотря на огромную популярность омолаживающих кремов, этот вид косметики имеет низкую эффективность. Нанесенные на кожу вещества просто не могут проникнуть в слой дермы, а ведь она также нуждается в омоложении. И хотя современные крема и сыворотки превосходят свои исторические аналоги, они также воздействуют лишь на эпидермис.
+            p Инъекционные методы напротив доставляют лекарственный препарат прямо в глубокие слои кожи, обеспечивая длительный косметологический эффект. Микроинъекции выступают доступной и безопасной альтернативой пластической хирургии и прочим вмешательствам, они не требуют восстановления, и при этом дают заметный результат. Если же вы все же решитесь на пластическую операцию - инъекционная косметология поможет подготовиться к вмешательству хирурга и обеспечит последующую реабилитацию.
+            .hatchet.hatchet--green
+              .hatchet__title Что включает в себя программа «Здоровое сердце»:
+              .hatchet__content
+                ol
+                  li Консультация врача-гериатра на дому;
+                  li Консультации врачей-специалистов (реабилитолога, невролога, психиатра, кардиолога, эндокринолога и т.д.);
+                  li Диагностические процедуры на дому (анализы, ЭКГ, УЗИ и т.д.);
+                  li Инъекции, капельницы, лечебный массаж и другие лечебные манипуляции и уходовые процедуры;
+                  li Помощь в быту (оценка риска окружающей домашней среды, профилактика пролежней, гигиенические процедуры и т.д.).
+
+        .landing-unit
+          p если выводим только две карточки, то к блоку <strong>.program-tiles-list</strong> добавляем класс <strong>.program-tiles-list--double</strong>
+
+        .landing-unit
+          .program-tiles-list
+            .program-tiles-list__item
+              .program-tile
+                .program-tile__image: img(src="images/program-tile-01.png")
+                .stock-label.stock-label--red Акция
+                .program-tile__info
+                  .program-tile__top
+                    .program-tile__title Программа «Здоровый желудок»
+                    .program-tile__subtitle Состав программы:
+                    .program-tile__list
+                      .program-tile__list___item
+                        p: strong Консультации врачей
+                        p Первичная консультация врача - гастроэнтеролога / воп
+                      .program-tile__list___item
+                        p: strong Инструментальная диагностика
+                        p ЭКГ в покое
+                        p УЗИ печени и желчного пузыря
+                      .program-tile__list___item
+                        p: strong Процедуры
+                        p – Детокс капельница
+                        p – Озоновая капельница+мексидол
+                  .program-tile__bottom
+                    .program-tile__price
+                      span 36 799 ₽
+                      span 20 353 ₽
+                    .program-tile__button
+                      a(href="#").btn.btn-secondary Записаться
+            .program-tiles-list__item
+              .program-tile
+                .program-tile__image: img(src="images/program-tile-02.png")
+                .program-tile__info
+                  .program-tile__top
+                    .program-tile__title Программа «Антистресс»
+                    .program-tile__subtitle Состав программы:
+                    .program-tile__list
+                      .program-tile__list___item
+                        p: strong Консультации врачей
+                        p Первичная консультация врача общей практики
+                      .program-tile__list___item
+                        p: strong Инструментальная диагностика
+                        p ЭКГ в покое
+                        p УЗИ щитовидной железы
+                      .program-tile__list___item
+                        p: strong Процедуры
+                        p – Озонокислородная капельница 1200+ мексидол
+                        p – Общий массаж
+                        p – Прием озонированной воды
+                  .program-tile__bottom
+                    .program-tile__price 12 628 ₽
+                    .program-tile__button
+                      a(href="#").btn.btn-secondary Записаться
+            .program-tiles-list__item
+              .program-tile
+                .program-tile__image: img(src="images/program-tile-03.png")
+                .program-tile__info
+                  .program-tile__top
+                    .program-tile__title Программа «Иммунитет»
+                    .program-tile__subtitle Состав программы:
+                    .program-tile__list
+                      .program-tile__list___item
+                        p: strong Консультации врачей
+                        p Первичная консультация врача общей практики
+                      .program-tile__list___item
+                        p: strong Инструментальная диагностика
+                        p ЭКГ в покое
+                        p УЗИ печени и желчного пузыря
+                      .program-tile__list___item
+                        p: strong Процедуры
+                        p – Витаминная капельница
+                        p – Озонокислородная капельница + мексидол
+                        p – Питье озонированной воды
+                        p – Общий массаж
+                  .program-tile__bottom
+                    .program-tile__price 8 945 ₽
+                    .program-tile__button
+                      a(href="#").btn.btn-secondary Записаться
+
+
+        .landing-unit
+          .landing-programs
+            .landing-programs__item
+              +program-card({
+                title: 'Check-up для пожилого человека (возраст 65+)',
+                image: 'images/program_1.png',
+                price: '36 799 ₽',
+                old_price: '',
+                description: 'Люди пожилого и старческого возраста (в отличие от более молодых) имеют множество заболеваний и проблем, которые являются причиной плохого самочувствия и значительного снижения качества их жизни. Проводить диагностику и лечение в таких случаях лучше доверить специалистам, знающим возрастные особенности пожилого человека.',
+                stock: false,
+                tags: []
+              })
+            .landing-programs__item
+              +program-card({
+                title: 'Программа «Здоровое сердце»',
+                image: 'images/program_2.png',
+                price: '32 499 ₽',
+                old_price: '36 799 ₽',
+                description: 'В данной программе есть все, чтобы узнать в каком состоянии находится ваша сердечно-сосудистая система. Можно выявить органическую патологию сердца и сосудов, а также различные нарушения ритма. Анализ крови покажет есть ли у вас сердечно-сосудистая недостаточность и отклонения в обменных процессах метаболитов.',
+                stock: true,
+                tags: []
+              })
+
+        .landing-unit
+          .landing-persons
+            .landing-persons__item
+              .doctor-panel
+                .doctor-panel__container
+                  .doctor-panel__picture
+                    .doctor-panel__img: img(src="images/doctor_01.png")
+                  .doctor-panel__info
+                    .doctor-panel__top
+                      h1 Цупко Игорь Викторович
+                      .doctor-panel__profile
+                        .doctor-panel__profile___item
+                          .doctor-panel__profile___item-name Должность:
+                          .doctor-panel__profile___item-value Терапевт, кардиолог, гериатр, к.м.н.
+                        .doctor-panel__profile___item
+                          .doctor-panel__profile___item-name Стаж:
+                          .doctor-panel__profile___item-value 24 года
+                        .doctor-panel__profile___item
+                          .doctor-panel__profile___item-name Специализация:
+                          .doctor-panel__profile___item-value Врач - терапевт, кардиолог, гериатр.
+                        .doctor-panel__profile___item
+                          .doctor-panel__profile___item-name Степень:
+                          .doctor-panel__profile___item-value Кандидат медицинских наук
+                      .doctor-panel__prices
+                        .doctor-panel__prices-title Стоимость приема:
+                        .doctor-panel__prices-value от 1 700 ₽
+                    .doctor-panel__bottom
+                      .btn.btn-secondary(data-bs-toggle="modal" data-bs-target="#doctorAppointmentModal") Запись на прием
+            .landing-persons__item
+              .doctor-panel
+                .stock-label.stock-label--red Акция
+                .doctor-panel__container
+                  .doctor-panel__picture
+                    .doctor-panel__img: img(src="images/doctor_02.png")
+                  .doctor-panel__info
+                    .doctor-panel__top
+                      h1 Шеин Максим Владимирович
+                      .doctor-panel__profile
+                        .doctor-panel__profile___item
+                          .doctor-panel__profile___item-name Должность:
+                          .doctor-panel__profile___item-value Врач-гастроэнтеролог, врач-гепатолог
+                        .doctor-panel__profile___item
+                          .doctor-panel__profile___item-name Стаж:
+                          .doctor-panel__profile___item-value 24 года
+                        .doctor-panel__profile___item
+                          .doctor-panel__profile___item-name Специализация:
+                          .doctor-panel__profile___item-value Врач - терапевт, кардиолог, гериатр.
+                        .doctor-panel__profile___item
+                          .doctor-panel__profile___item-name Степень:
+                          .doctor-panel__profile___item-value Кандидат медицинских наук
+                      .doctor-panel__prices
+                        .doctor-panel__prices-title Стоимость приема:
+                        .doctor-panel__prices-value
+                          span от 1 700 ₽
+                          span от 1 350 ₽
+                    .doctor-panel__bottom
+                      .btn.btn-secondary(data-bs-toggle="modal" data-bs-target="#doctorAppointmentModal") Запись на прием
+
+        .landing-unit
+          .landing-unit__title Врачи
+          +doctors-slider({
+            items: [
+              {
+                name: 'ЦУПКО Игорь Викторович',
+                position: 'Терапевт, кардиолог, гериатр, к.м.н.',
+                image: 'images/doctor_01.png',
+                price: 'от 1 350 ₽',
+                price_old: 'от 1 700 ₽',
+                order_btn: true,
+                stock: true,
+              },
+              {
+                name: 'ШЕИН Максим Владимирович',
+                position: 'Врач-гастроэнтеролог, врач-гепатолог',
+                image: 'images/doctor_02.png',
+                price: 'от 1 200 ₽',
+                price_old: 'от 1 700 ₽',
+                order_btn: true,
+                stock: true,
+              },
+              {
+                name: 'БЕЛЯЕВА Юлия Викторовна',
+                position: 'Врач-психиатр, психотерапевт',
+                image: 'images/doctor_03.png',
+                price: 'от 1 700 ₽',
+                price_old: '',
+                order_btn: true,
+                stock: false,
+              },
+              {
+                name: 'Сутуло Ирина Алексеевна',
+                position: 'Уролог',
+                image: 'images/doctor_04.png',
+                price: 'от 1 700 ₽',
+                price_old: '',
+                order_btn: true,
+                stock: false,
+              },
+              {
+                name: 'Абдурахимов Рустам Абдуллоевич',
+                position: 'Врач ультразвуковой диагностики',
+                image: 'images/doctor_05.png',
+                price: 'от 1 700 ₽',
+                price_old: '',
+                order_btn: true,
+                stock: false,
+              },
+              {
+                name: 'Трухманова Анна Юрьевна',
+                position: 'Главный врач, врач-гастроэнтеролог, врач-терапевт',
+                image: 'images/doctor_06.png',
+                price: 'от 1 700 ₽',
+                price_old: '',
+                order_btn: true,
+                stock: false,
+              }
+            ]
+          })
+
+        .landing-unit
+          include components/doctor-call
+
+
+  include components/map
+
+block footer
+  include layouts/footer

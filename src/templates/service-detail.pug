@@ -1,0 +1,230 @@
+extends layouts/main
+
+block header
+  include layouts/header
+
+block content
+  nav(aria-label="breadcrumb" class="breadcrumb-place")
+    .container
+      ol.breadcrumb
+        li.breadcrumb-item: a(href="/"): svg(class="svg-icon" viewBox="0 0 14 14" width="14" height="14"): use(xlink:href="#svg-breadcrumb-home")
+        li.breadcrumb-item: a(href="services.html") Услуги
+        li.breadcrumb-item.active Инъекционная косметология
+  .page__content
+    .container
+      .service-post
+        .service-post__header
+          .service-header
+            .service-header__container
+              .service-header__info
+                .service-header__top
+                  h1 Инъекционная косметология
+                  p Любая женщина мечтает о том, чтобы красиво и молодо выглядеть в любом возрасте. В некоторых случаях с этим может помочь косметика, но решить проблему эффективнее чем маскировать ее. Современные косметологические методы способны стимулировать регенерационные процессы, естественным образом омолаживая кожу пациента.
+                .service-header__bottom
+                  a(href="#").btn.btn-secondary Оставить заявку
+              .service-header__picture
+                img(src="images/service-detail-picture.png")
+
+        .service-post__block
+          .cure-plan-unit
+            .cure-plan-unit__icon
+              svg(class="svg-icon" viewBox="0 0 117 104" width="117" height="104"): use(xlink:href="#svg-cure-plan-unit")
+            .cure-plan-unit__text
+              p Мы работаем по плану лечения (курсовому лечению). Работаем над тем, чтобы Вы были здоровы. Поддерживая правильный медицинский подход - Вы получаете скидку.
+              p: strong Спросите себя, Вам давали когда-либо в клиниках план лечения? Задумайтесь.
+
+        .service-post__block
+          .recommend-list
+            .recommend-list__title: h2 Популярные услуги
+            .recommend-list__container
+              .recommend-list__item
+                a(href="#").service-card
+                  .service-card__picture: img(src="images/service-card-05.png")
+                  .service-card__info
+                    .service-card__name Биоревитализация
+              .recommend-list__item
+                a(href="#").service-card
+                  .service-card__picture: img(src="images/service-card-06.png")
+                  .service-card__info
+                    .service-card__name Мезотерапия
+              .recommend-list__item
+                a(href="#").service-card
+                  .service-card__picture: img(src="images/service-card-07.png")
+                  .service-card__info
+                    .service-card__name Мезонити
+              .recommend-list__item
+                a(href="#").service-card
+                  .service-card__picture: img(src="images/service-card-08.png")
+                  .service-card__info
+                    .service-card__name Контурная пластика
+
+        .service-post__content.simple-text
+          p Инъекционная косметология подойдет для любого возраста, однако наибольшей популярностью она пользуется среди пациенток в возрасте от 25 до 55 лет. Не стоит удивляться, что инъекциями пользуются даже в столь молодом возрасте: начать профилактическое лечение при первых же признаках старения легче и выгоднее, чем пытаться сгладить уже имеющиеся изменения.
+          p Хотя остановить течение времени невозможно, пользуясь инъекционными методиками вы можете затормозить процесс старения кожи. Эффект от процедур будет особенно заметен, если сочетать микроинъекции с аппаратной косметологией или пластической хирургией.
+
+          .hatchet.hatchet--green
+            .hatchet__title Показания к инъекционной косметологии:
+            .hatchet__content
+              ul
+                li Угревая сыпь;
+                li Последствия акне;
+                li Сухая кожа;
+                li Потеря эластичности кожи;
+                li Тусклый цвет лица;
+                li Потеря объема лица;
+                li Пигментированность кожи;
+                li Дряблая кожа;
+                li Нечеткость черт лица;
+                li Складки и морщины;
+                li Наличие рубцов и шрамов;
+                li Ассиметричное лицо;
+                li Провисание тканей;
+                li Локальные жировые отложения.
+          h3 На чем основывается инъекционная косметология?
+          p Несмотря на огромную популярность омолаживающих кремов, этот вид косметики имеет низкую эффективность. Нанесенные на кожу вещества просто не могут проникнуть в слой дермы, а ведь она также нуждается в омоложении. И хотя современные крема и сыворотки превосходят свои исторические аналоги, они также воздействуют лишь на эпидермис.
+          p Инъекционные методы напротив доставляют лекарственный препарат прямо в глубокие слои кожи, обеспечивая длительный косметологический эффект. Микроинъекции выступают доступной и безопасной альтернативой пластической хирургии и прочим вмешательствам, они не требуют восстановления, и при этом дают заметный результат. Если же вы все же решитесь на пластическую операцию - инъекционная косметология поможет подготовиться к вмешательству хирурга и обеспечит последующую реабилитацию.
+          h3 Преимущества инъекционной косметологии:
+          ul
+            li Доставка препарата прямо в слой дермы дает явный и долговременный эффект от процедуры;
+            li Помимо омолаживающего эффекта, микроинъекции насыщают кожу полезными веществам, запускают процессы восстановления и обновления клеток кожи;
+            li Эффект омоложения появляется плавно и постепенно, естественным образом воспринимаясь окружающими. Никто не заподозрит, что за улучшением состояния кожи стоит использование инъекций;
+            li Комплексное воздействие инъекционной методики позволяет бороться с несколькими проблемами одновременно: убрав морщины с помощью уколов, вы также получите эластичную кожу с ровным здоровым цветом;
+            li Микроинъекции практически не нарушают целостность покровов кожи и не травмируют ее верхний слой. Несмотря на то, что тончайшие иглы практически не чувствуются пациентом, при процедуре все равно используются обезболивающие методы. После процедуры не нужно проходить долгую реабилитацию: просто наслаждайтесь естественной красотой вашего лица.
+          h3 Кто может пользоваться инъекционной косметологией?
+          p Несмотря на то, что косметологическими услугами чаще пользуются женщины, это медицинское направление подходит для людей любого пола и возраста. Вовремя начатый курс позволит надолго продлить молодость, сохранив вашу красоту. Молодые девушки могут применять инъекции для борьбы с угревой сыпью и ее последствиями, женщины пожилого возраста используют ее для предоперационной подготовки и последующей реабилитации.
+          .hatchet.hatchet--red
+            .hatchet__title Тем не менее у уколов красоты есть и противопоказания:
+            .hatchet__content
+              ul
+                li Гемофилия, любые заболевания, связанные с нарушениями свертываемости крови;
+                li Прием препаратов, влияющих на свертываемость крови;
+                li Эпилепсия;
+                li Период беременности и кормления грудью;
+                li Соматические нарушения;
+                li Аутоиммунные заболевания;
+                li Прохождение химиотерапии при онкологических заболеваниях;
+                li Психические заболевания;
+                li Острые либо обострившиеся хронические заболевания;
+                li Иммунодепрессивные состояния;
+                li Склонность к образованию гипертрофированных рубцов;
+                li Раздражения и воспаления кожи в районе воздействия процедуры, наличие ранок и повреждений;
+                li Алкоголизм и наркомания;
+                li Индивидуальная непереносимость препаратов.
+
+        .service-post__block
+          .question-call
+            .question-call__info
+              h2.question-call__title У Вас возникли вопросы?
+            .question-call__btn
+              a(href="#").btn.btn-primary Позвонить
+
+        .service-post__block
+          .welfare
+            h3 Преимущества
+            ul
+              li Высокая эффективность процедур;
+              li Современные методы и технологии;
+              li Участие опытных специалистов-гериатров
+              li Широкая область применения и большой спектр лечебных свойств;
+
+        .service-post__block
+          .service-prices
+            .service-prices__title: h2 Наши цены
+            .service-prices__container
+              a.service-prices__item(href="service-detail.html")
+                .service-prices__name Прием (осмотр, консультация) врача-косметолога
+                .service-prices__cost 1 900 ₽
+              a.service-prices__item(href="service-detail.html")
+                .service-prices__name Биоревитализация
+                .service-prices__cost от 8 900 ₽
+              a.service-prices__item(href="service-detail.html")
+                .service-prices__name Мезотерапия
+                .service-prices__cost 5 000 ₽
+              a.service-prices__item(href="service-detail.html")
+                .service-prices__name Мезонити ( нитевой лифтинг) Bio S line, Intrarich
+                .service-prices__cost от 650 ₽
+              a.service-prices__item(href="service-detail.html")
+                .service-prices__name Контурная пластика лица
+                .service-prices__cost от 12 000 ₽
+              a.service-prices__item(href="service-detail.html")
+                .service-prices__name Аппликационная анестезия 5% кремом «Эмла», «Акриол»
+                .service-prices__cost 700 ₽
+              a.service-prices__item(href="service-detail.html")
+                .service-prices__name Инъекции «BOTOX», руб/ед.
+                .service-prices__cost 350 ₽
+              a.service-prices__item(href="service-detail.html")
+                .service-prices__name Лечение гипергидроза (повышенное потоотделение) препаратами ботулотоксина типа А - «BOTOX», руб/ед.
+                .service-prices__cost 290 ₽
+
+        .service-post__block
+          .recommend-list
+            .recommend-list__title: h2 Также рекомендуем обследования
+            .recommend-list__container
+              .recommend-list__item
+                a(href="#").service-card
+                  .service-card__picture: img(src="images/service-card-05.png")
+                  .service-card__info
+                    .service-card__name Биоревитализация
+              .recommend-list__item
+                a(href="#").service-card
+                  .service-card__picture: img(src="images/service-card-06.png")
+                  .service-card__info
+                    .service-card__name Мезотерапия
+              .recommend-list__item
+                a(href="#").service-card
+                  .service-card__picture: img(src="images/service-card-07.png")
+                  .service-card__info
+                    .service-card__name Мезонити
+              .recommend-list__item
+                a(href="#").service-card
+                  .service-card__picture: img(src="images/service-card-08.png")
+                  .service-card__info
+                    .service-card__name Контурная пластика
+              .recommend-list__item
+                a(href="#").service-card
+                  .service-card__picture: img(src="images/service-card-01.png")
+                  .service-card__info
+                    .service-card__name Косметический массаж
+              .recommend-list__item
+                a(href="#").service-card
+                  .service-card__picture: img(src="images/service-card-02.png")
+                  .service-card__info
+                    .service-card__name Химический пилинг
+              .recommend-list__item
+                a(href="#").service-card
+                  .service-card__picture: img(src="images/service-card-03.png")
+                  .service-card__info
+                    .service-card__name Косметические маски
+              .recommend-list__item
+                a(href="#").service-card
+                  .service-card__picture: img(src="images/service-card-04.png")
+                  .service-card__info
+                    .service-card__name Ультразвуковая чистка
+              .recommend-list__item
+                a(href="#").service-card
+                  .service-card__picture: img(src="images/service-card-09.png")
+                  .service-card__info
+                    .service-card__name Прием врача-косметолога
+              .recommend-list__item
+                a(href="#").service-card
+                  .service-card__picture: img(src="images/service-card-10.png")
+                  .service-card__info
+                    .service-card__name Косметические процедуры
+
+        .service-post__block
+          include components/doctor-call
+
+        .service-post__block
+          h2 Отзывы
+          include components/reviews/slider
+          a(href="reviews.html").btn.btn-more
+            span Смотреть все
+            svg(class="svg-icon" viewBox="0 0 19 13" width="19" height="13"): use(xlink:href="#svg-btn-arrow-right")
+
+
+
+
+  include components/map
+
+block footer
+  include layouts/footer

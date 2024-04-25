@@ -1,0 +1,70 @@
+.c-search {
+  position: relative;
+  width: 100%;
+  &__field {
+    width: 100%;
+    input[type="text"] {
+      width: 100%;
+      border: none;
+      padding: 0 14px 0 40px;
+      height: 40px;
+      border-radius: 25px;
+      background: $colorGrayLight;
+      font-size: 14px;
+      outline: none;
+      @media(min-width: 576px){
+        height: 50px;
+      }
+      &::placeholder {
+        color: $colorBlack;
+        opacity: 0.5;
+      }
+    }
+  }
+  &__submit {
+    position: absolute;
+    background: transparent;
+    border: none;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    top: 3px;
+    left: 5px;
+    outline: none;
+    @media(min-width: 576px){
+      width: 40px;
+      height: 40px;
+    }
+    .svg-icon {
+      width: 100%;
+      opacity: 0.5;
+    }
+  }
+  &__dropdown {
+    position: absolute;
+    width: 100%;
+    background: #ffffff;
+    padding: 15px 0;
+    margin: 5px 0 0;
+    box-shadow: 0 4px 12px rgba(60, 60, 81, 0.12);
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s;
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.c-search-list {
+  &__link {
+    cursor: pointer;
+    padding: 8px 20px;
+    &:hover {
+      background: #EDF1D3;
+    }
+  }
+}

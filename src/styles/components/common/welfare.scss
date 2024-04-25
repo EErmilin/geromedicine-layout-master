@@ -1,0 +1,30 @@
+.welfare {
+  background: radial-gradient(87.72% 134.91% at 36.07% -6.84%, #FFAF96 0%, #F88F6D 100%);
+  border-radius: 10px;
+  position: relative;
+  color: #ffffff;
+  padding: 20px 23px;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 224px;
+    height: 162px;
+    background: url("../images/welfare-gears.svg");
+  }
+  p, ul {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  ul {
+    padding: 0 0 0 22px;
+    li {
+      list-style-image: url("../images/icon-double-tick-white.svg");
+    }
+  }
+  h3 {
+    margin: 0 0 1rem;
+  }
+}

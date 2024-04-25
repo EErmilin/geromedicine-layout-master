@@ -1,0 +1,154 @@
+.mobile-menu
+  .mobile-menu__top
+    .mobile-menu__search
+      .c-search
+        .c-search__field
+          input(type="text" placeholder="Поиск")
+        button(type="submit").c-search__submit
+          svg(class="svg-icon" viewBox="0 0 16 17" width="16" height="17"): use(xlink:href="#svg-search")
+    .mobile-menu__buttons
+      .mobile-menu__btn
+        a.c-btn.c-btn--green(href="#")
+          .c-btn__content
+            .c-btn__icon
+              svg(class="svg-icon" viewBox="0 0 22 22" width="22" height="22"): use(xlink:href="#svg-video-camera")
+            .c-btn__text.c-btn__text--w100 Онлайн консультация
+      .mobile-menu__btn
+        a.c-btn.c-btn--green(href="#")
+          .c-btn__content
+            .c-btn__icon
+              svg(class="svg-icon" viewBox="0 0 21 21" width="21" height="21"): use(xlink:href="#svg-writing-pen")
+            .c-btn__text.c-btn__text--w85 Записаться на прием
+      .mobile-menu__btn
+        a.c-btn.c-btn--pink(href="#")
+          .c-btn__content
+            .c-btn__icon
+              svg(class="svg-icon" viewBox="0 0 26 25" width="26" height="25"): use(xlink:href="#svg-ambulance")
+            .c-btn__text.c-btn__text--w50 Вызов врача
+  .mobile-menu__nav.scrollbar
+    nav.mobile-nav
+      ul.mobile-nav__list
+        li.mobile-nav__item
+          .mobile-nav__link
+            a(href="about.html") О клинике
+            .mobile-nav__toggle
+              svg(class="svg-icon" viewBox="0 0 11 7" width="11" height="7"): use(xlink:href="#svg-mobile-nav-arrow")
+          .mobile-nav__sub
+            ul
+              li: a(href="about.html") Инфо о клинике
+              li: a(href="legal-docs.html") Лицензии и документы
+              li: a(href="reviews.html") Отзывы
+              li: a(href="vacancies.html") Вакансии
+              li: a(href="#") Школа гериатрии
+        li.mobile-nav__item
+          .mobile-nav__link
+            a(href="#") Диагностика
+            .mobile-nav__toggle
+              svg(class="svg-icon" viewBox="0 0 11 7" width="11" height="7"): use(xlink:href="#svg-mobile-nav-arrow")
+          .mobile-nav__sub
+            ul
+              li: a(href="#") УЗИ
+              li: a(href="#") ЭКГ
+              li: a(href="#") Холтер-мониторинг
+              li: a(href="#") Программы обследования
+              li: a(href="#") УЗИ мягких тканей лица
+              li
+                a(href="#") Анализы
+                ul
+                  li: a(href="#") Тестирование на COVID-19
+                  li: a(href="#") Калькулятор стоимости анализов
+        li.mobile-nav__item
+          .mobile-nav__link
+            a(href="/") Косметология
+            .mobile-nav__toggle
+              svg(class="svg-icon" viewBox="0 0 11 7" width="11" height="7"): use(xlink:href="#svg-mobile-nav-arrow")
+          .mobile-nav__sub
+            ul
+              li: a(href="#") Контурная пластика
+              li: a(href="#") Биоревитализация
+              li: a(href="#") Мезонити
+              li: a(href="#") Мезотерапия
+              li: a(href="#") Химический пилинг
+              li: a(href="#") Ультразвуковая чистка
+              li: a(href="#") Косметические маски
+              li: a(href="#") Косметический массаж
+        li.mobile-nav__item
+          .mobile-nav__link
+            a(href="/") Услуги
+            .mobile-nav__toggle
+              svg(class="svg-icon" viewBox="0 0 11 7" width="11" height="7"): use(xlink:href="#svg-mobile-nav-arrow")
+          .mobile-nav__sub
+            ul
+              li: a(href="#") PRP-терапия
+              li: a(href="#") Плазмотерапия
+              li: a(href="#") Капельницы для здоровья и красоты
+              li: a(href="#") Подбор очков
+              li: a(href="#") Медицинский уход на дому
+              li: a(href="#") Лечебный массаж
+              li: a(href="#") Лечебная физкультура
+              li: a(href="#") Ботокс
+              li: a(href="#") Паравертебральные блокады
+              li: a(href="#") Внутрисуставные инъекции
+              li: a(href="#") Лечение акне
+              li: a(href="#") Озонотерапия
+              li: a(href="#") Капельницы с препаратом "Лаеннек"
+              li: a(href="#") Капельницы "Детокс - алкоголь"
+              li: a(href="#") Инфузионная терапия (капельницы)
+              li: a(href="#") Капельницы после COVID-19
+              li: a(href="#") Предрейсовый осмотр
+        li.mobile-nav__item
+          .mobile-nav__link
+            a(href="programs.html") Программы
+        li.mobile-nav__item
+          .mobile-nav__link
+            a(href="/") Запись к врачу
+            .mobile-nav__toggle
+              svg(class="svg-icon" viewBox="0 0 11 7" width="11" height="7"): use(xlink:href="#svg-mobile-nav-arrow")
+          .mobile-nav__sub
+            ul
+              li: a(href="#") Гериатр (Геронтолог)
+              li: a(href="#") Терапевт
+              li: a(href="#") Невролог
+              li: a(href="#") Кардиолог
+              li: a(href="#") Эндокринолог
+              li: a(href="#") Дерматовенеролог
+              li: a(href="#") Офтальмолог
+              li: a(href="#") Гинеколог
+              li: a(href="#") Уролог
+              li: a(href="#") Травматолог-ортопед
+              li: a(href="#") Гастроэнтеролог
+              li: a(href="#") Психиатр
+              li: a(href="#") Отоларинголог
+        li.mobile-nav__item
+          .mobile-nav__link
+            a(href="/") Выезд на дом
+            .mobile-nav__toggle
+              svg(class="svg-icon" viewBox="0 0 11 7" width="11" height="7"): use(xlink:href="#svg-mobile-nav-arrow")
+          .mobile-nav__sub
+            ul
+              li: a(href="#") Патронаж
+              li
+                a(href="service-home-doctor.html") Врач на дом
+                ul
+                  li: a(href="#") Гериатор
+                  li: a(href="#") Терапевт
+                  li: a(href="#") Невролог
+                  li: a(href="#") Кардиолог
+                  li: a(href="#") Эндокринолог
+                  li: a(href="#") Дерматовенеролог
+                  li: a(href="#") Офтальмолог
+                  li: a(href="#") Гинеколог
+                  li: a(href="#") Уролог
+                  li: a(href="#") Травматолог-ортопед
+                  li: a(href="#") Гастроэнтеролог
+                  li: a(href="#") Психиатр
+        li.mobile-nav__item
+          .mobile-nav__link
+            a(href="stock.html") Акции
+        li.mobile-nav__item
+          .mobile-nav__link
+            a(href="prices.html") Цены
+        li.mobile-nav__item
+          .mobile-nav__link
+            a(href="contacts.html") Контакты
+

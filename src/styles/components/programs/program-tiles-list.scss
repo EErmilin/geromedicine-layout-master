@@ -1,0 +1,30 @@
+.program-tiles-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+  &--double {
+    .program-tiles-list {
+      &__item {
+        @media(min-width: 1200px){
+          max-width: 50%;
+          flex: 0 0 50%;
+        }
+      }
+    }
+  }
+  &__item {
+    width: 100%;
+    padding: 0 15px;
+    max-width: 100%;
+    flex: 0 0 100%;
+    margin: 0 0 30px;
+    @media(min-width: 768px){
+      max-width: 50%;
+      flex: 0 0 50%;
+    }
+    @media(min-width: 1200px){
+      max-width: 33.33%;
+      flex: 0 0 33.33%;
+    }
+  }
+}

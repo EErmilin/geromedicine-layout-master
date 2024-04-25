@@ -1,0 +1,126 @@
+.btn {
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 3px 15px;
+  line-height: 28px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  @media(min-width: 576px) {
+    font-size: 16px;
+    padding: 5px 15px;
+  }
+
+  .svg-icon {
+    margin: 0 8px 0 0;
+  }
+
+  &-primary {
+    background-color: #F88F6D;
+    border-color: #F88F6D;
+
+    &:hover {
+      background-color: #FEA386;
+      border-color: #FEA386;
+      box-shadow: 0 4px 34px rgba(248, 143, 109, 0.3);
+    }
+
+    &.active, &:active, &:focus {
+      background-color: #FEA386;
+      border-color: #FEA386;
+    }
+  }
+
+  &-outline-primary {
+    color: $colorBlack;
+    border-color: #F88F6D;
+
+    &:hover {
+      background-color: #F88F6D;
+      border-color: #F88F6D;
+      color: #ffffff;
+    }
+
+    &.active, &:active, &:focus {
+      background-color: #F88F6D;
+      border-color: #F88F6D;
+      color: #ffffff;
+    }
+  }
+
+  &-secondary {
+    background-color: #93BB3E;
+    border-color: #93BB3E;
+
+    &:hover {
+      background-color: #A5D246;
+      border-color: #A5D246;
+    }
+
+    &.active, &:active, &:focus {
+      background-color: #B5E451;
+      border-color: #B5E451;
+    }
+  }
+
+  &-more {
+    font-size: 16px;
+    padding: 5px 0;
+    @media(min-width: 576px){
+      font-size: 20px;
+    }
+
+    &:hover {
+      .svg-icon {
+        transform: translateX(8px);
+      }
+    }
+    .svg-icon {
+      margin: 0 0 0 6px;
+      transition: transform 0.2s;
+    }
+  }
+
+  &-download {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #FF6A29;
+    &:hover {
+      color: #F88F6D;
+    }
+  }
+
+  &-social {
+    background: #8b8b8b;
+    color: #ffffff;
+    border-radius: 20px;
+    font-size: 14px;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s;
+    &:hover {
+      background: #9c9c9c;
+      color: #ffffff;
+    }
+    &--viber {
+      background: #B78DED;
+      &:hover {
+        background: #C8A5F4;
+      }
+    }
+    &--whatsapp {
+      background: #51C85D;
+      &:hover {
+        background: #72D77D;
+      }
+    }
+    &--telegram {
+      background: #74A2F0;
+      &:hover {
+        background: #9DBFFA;
+      }
+    }
+  }
+
+}

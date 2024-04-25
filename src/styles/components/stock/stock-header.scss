@@ -1,0 +1,45 @@
+.stock-header {
+  background: #F5F5F5;
+  overflow: hidden;
+  border-radius: 10px;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__info, &__picture {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+    @media(min-width: 992px) {
+      max-width: 50%;
+      flex: 0 0 50%;
+    }
+  }
+
+  &__info {
+    position: relative;
+    padding: 45px 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media(min-width: 768px) {
+      padding: 60px 30px 30px;
+    }
+  }
+
+  &__bottom {
+    padding: 20px 0 0;
+  }
+
+  &__picture {
+    display: none;
+    @media(min-width: 992px) {
+      display: block;
+      text-align: right;
+      height: 100%;
+      width: auto;
+    }
+  }
+}

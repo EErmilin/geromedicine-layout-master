@@ -1,0 +1,31 @@
+.question-call {
+  border: 1px solid #EDF1D3;
+  border-radius: 10px;
+  @media(min-width: 576px) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__info, &__btn {
+    padding: 15px 20px;
+    @media(min-width: 992px) {
+      padding: 30px 35px;
+    }
+  }
+
+  &__btn {
+    flex-shrink: 0;
+    .btn {
+      width: 100%;
+      @media(min-width: 576px) {
+        width: auto;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0;
+  }
+}

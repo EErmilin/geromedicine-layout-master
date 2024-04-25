@@ -1,0 +1,22 @@
+section.map
+  .container
+    .map__place
+      <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae68f42cb23099a3be9a721c0a4dfc5fcc502100375ac00c6941008c9172c0c87&amp;lang=ru_RU&amp;scroll=true"></script>
+    .map__info
+      .map-card
+        .map-card__title Контакты
+        .map-card__content
+          .map-card__item ООО «Клиника для детей и взрослых на Открытом шоссе»
+          .map-card__item
+            svg(class="svg-icon" viewBox="0 0 7 9" width="13" height="13"): use(xlink:href="#svg-address-point")
+            span Москва, Открытое шоссе, дом 12, стр.2, эт.1<br>1 мин от ст.м. Бульвар Рокоссовского
+          .map-card__item
+            svg(class="svg-icon" viewBox="0 0 23 23" width="13" height="13"): use(xlink:href="#svg-phone")
+            a(href="tel:+7 (495) 023-22-70") +7 (495) 023-22-70
+          .map-card__item
+            svg(class="svg-icon" viewBox="0 0 13 13" width="13" height="13"): use(xlink:href="#svg-work-time")
+            span ПН-ПТ: с 8:00 до 21:00,<br>Сб-Вс: c 10:00 до 18:00
+          .map-card__btn
+            .btn.btn-primary
+              svg(class="svg-icon" viewBox="0 0 9 10" width="9" height="10"): use(xlink:href="#svg-btn-play")
+              span Видео как нас найти

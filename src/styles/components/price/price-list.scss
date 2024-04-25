@@ -1,0 +1,118 @@
+.price-list {
+  &__description {
+    margin: 0 0 40px;
+    blockquote {
+      border-left-color: #F88F6D;
+      border-bottom-color: #FBE3DD;
+      border-top-color: #FBE3DD;
+      border-right-color: #FBE3DD;
+      color: #F88F6D;
+    }
+  }
+
+  &__search {
+    margin: 0 0 30px;
+  }
+
+  &__container {
+
+  }
+
+  &__item {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #EDF1D3;
+    margin: 0 0 10px;
+    &.expanded {
+      box-shadow: 0 4px 19px rgba(147, 187, 62, 0.15);
+      .price-list {
+        &__toggle {
+          .svg-icon {
+            transform: rotate(180deg);
+          }
+        }
+      }
+      .price-list-sub {
+        display: block;
+      }
+    }
+    .price-list-sub {
+      display: none;
+    }
+  }
+
+  &__panel {
+    display: flex;
+    justify-content: space-between;
+    color: #3C3C51;
+  }
+
+  &__link {
+    flex: 1 0 auto;
+    padding: 15px 20px;
+    color: inherit;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 1.3;
+    font-size: 14px;
+    cursor: pointer;
+    @media(min-width: 1200px){
+      font-size: 16px;
+    }
+    &:hover {
+      color: #93BB3E;
+    }
+  }
+
+  &__toggle {
+    flex-shrink: 0;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+    background: #EDF1D3;
+    .svg-icon {
+      transition: 0.2s;
+    }
+  }
+
+}
+
+.price-list-sub {
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #EDF1D3;
+    color: inherit;
+    text-decoration: none;
+    &:hover {
+      color: inherit;
+      background: rgba(237, 241, 211, 0.5);
+    }
+  }
+  &__name {
+    line-height: 1.4;
+    padding: 15px 20px;
+    font-size: 14px;
+    @media(min-width: 1200px){
+      font-size: 16px;
+    }
+    span {
+      display: block;
+      opacity: 0.6;
+    }
+  }
+  &__value {
+    flex-shrink: 0;
+    padding: 15px 20px;
+    font-weight: 600;
+    font-size: 14px;
+    @media(min-width: 1200px){
+      font-size: 16px;
+    }
+  }
+
+}

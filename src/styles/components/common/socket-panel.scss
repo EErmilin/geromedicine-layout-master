@@ -1,0 +1,34 @@
+.socket-panel {
+  position: fixed;
+  right: 10px;
+  bottom: 40px;
+  z-index: 50;
+
+  &__item {
+    display: flex;
+    justify-content: flex-end;
+
+    &:not(:last-child) {
+      margin: 0 0 10px;
+    }
+
+    &--desktop {
+      display: none;
+      @media(min-width: 768px) {
+        display: flex;
+      }
+    }
+
+    &--mobile {
+      display: flex;
+      @media(min-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  .c-btn {
+    position: relative;
+    right: 0;
+  }
+}

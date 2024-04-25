@@ -1,0 +1,25 @@
+.calc-result {
+  &__top {
+    display: flex;
+    align-items: baseline;
+    margin: 0 0 20px;
+  }
+  &__name {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1;
+    margin-right: 20px;
+  }
+  &__value {
+    font-size: 30px;
+    font-weight: 600;
+    color: #FF6A29;
+    line-height: 1;
+  }
+  &__buttons {
+    .btn {
+      min-width: 160px;
+      margin: 10px 0;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+header.header.page__header
+  .header__top
+    .container
+      .header-top
+        .header-top__info
+          .header-top__address
+            svg(class="svg-icon" viewBox="0 0 7 9" width="7" height="9"): use(xlink:href="#svg-address-point")
+            span Москва, Открытое шоссе, д. 48, стр. 2, 1 мин от ст.м. Бульвар Рокоссовского
+          .header-top__time Запись: ПН-ПТ: с 8:00 до 21:00, Сб-Вс: c 10:00 до 18:00
+        .header-top__phone
+          a(href="tel:+7 (495) 023-22-70")
+            svg(class="svg-icon" viewBox="0 0 23 23" width="16" height="16"): use(xlink:href="#svg-phone")
+            span +7 (495) 023-22-70
+  .header__main
+    .container
+      .header-main
+        .header-main__left
+          .header-main__logo
+            a.logo.logo--geromedicine(href="/"): img(src="images/logo-new-year.svg")
+          .header-main__logo
+            a.logo.logo--support(href="#"): img(src="images/logo-support.svg")
+          .header-main__search
+            .c-search
+              .c-search__field
+                input(type="text" placeholder="Услуга, врач, вопрос")
+              button(type="submit").c-search__submit
+                svg(class="svg-icon" viewBox="0 0 16 17" width="16" height="17"): use(xlink:href="#svg-search")
+        .header-main__right
+          .header-main__buttons
+            a.c-btn.c-btn--folded.c-btn--green(href="online-consult.html")
+              .c-btn__content
+                .c-btn__icon
+                  svg(class="svg-icon" viewBox="0 0 22 22" width="22" height="22"): use(xlink:href="#svg-video-camera")
+                .c-btn__text.c-btn__text--w100 Онлайн<br>консультация
+            .c-btn.c-btn--folded.c-btn--green(data-bs-toggle="modal" data-bs-target="#doctorAppointmentModal")
+              .c-btn__content
+                .c-btn__icon
+                  svg(class="svg-icon" viewBox="0 0 21 21" width="21" height="21"): use(xlink:href="#svg-writing-pen")
+                .c-btn__text.c-btn__text--w85 Записаться<br>на прием
+            .c-btn.c-btn--folded.c-btn--green(data-bs-toggle="modal" data-bs-target="#backCallModal")
+              .c-btn__content
+                .c-btn__icon
+                  svg(class="svg-icon" viewBox="0 0 23 23" width="23" height="23"): use(xlink:href="#svg-phone")
+                .c-btn__text.c-btn__text--w130 Заказать<br>обратный звонок
+            .c-btn.c-btn--folded.c-btn--pink(data-bs-toggle="modal" data-bs-target="#doctorCallModal")
+              .c-btn__content
+                .c-btn__icon
+                  svg(class="svg-icon" viewBox="0 0 26 25" width="26" height="25"): use(xlink:href="#svg-ambulance")
+                .c-btn__text.c-btn__text--w50 Вызов<br>врача
+            a.c-btn.c-btn--folded.c-btn--whatsapp(href="https://wa.me/79253775055")
+              .c-btn__content
+                .c-btn__icon
+                  svg(class="svg-icon" viewBox="0 0 23 23" width="23" height="23"): use(xlink:href="#svg-whatsapp")
+                .c-btn__text.c-btn__text--w85 Написать<br>в Whatsapp
+          .header-main__hamburger
+            include ../components/hamburger
+  .header__mobile
+    include ../components/menu/mobile-menu
+  .header__nav
+    .container
+      include ../components/menu/main-menu
+
+

@@ -1,0 +1,113 @@
+extends layouts/main
+
+block header
+  include layouts/header
+
+block content
+  nav(aria-label="breadcrumb" class="breadcrumb-place" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);")
+    .container
+      ol.breadcrumb
+        li.breadcrumb-item: a(href="/"): svg(class="svg-icon" viewBox="0 0 14 14" width="14" height="14"): use(xlink:href="#svg-breadcrumb-home")
+        li.breadcrumb-item: a(href="programs.html") Программы
+        li.breadcrumb-item.active Check-up для пожилого человека (возраст 65+)
+
+  .page__content
+    .container
+      .program-post
+        .program-post__header
+          .program-header
+            .program-header__container
+              .program-header__info
+                .program-header__top
+                  h1 Check-up для пожилого человека (возраст 65+)
+                  p Люди пожилого и старческого возраста (в отличие от более молодых) имеют множество заболеваний и проблем, которые являются причиной плохого самочувствия и значительного снижения качества их жизни.
+                .program-header__bottom
+                  .program-header__price 26 926 ₽
+                  .program-header__btn
+                    a(href="#").btn.btn-secondary Позвонить
+              .program-header__picture: img(src="images/program-post-header.jpg")
+        .program-post__content.simple-text
+          h3 На что обратить внимание:
+          ul
+            li Прежде всего, это проблемы с памятью;
+            li Неустойчивостью при ходьбе и падениями, возможно, переломами;
+            li Хронической болью;
+            li Похудением и слабостью;
+            li Сниженным настроением и утратой интереса к жизни;
+            li Приемом значительного кол-ва лекарственных препаратов, назначенных разными врачами-консультантами.
+          p Эти факторы никогда не должны упускаться ни самим пациентом, ни его ближайшим окружением.
+          p Проводить диагностику и лечение в таких случаях лучше доверить специалистам, знающим возрастные особенности пожилого человека.
+          p Не всегда возможно ходить по врачам в возрасте 80+, а длительное пребывание в стационаре увеличивает риски осложнений у таких пациентов.
+          h3: span.green В таком случае необходима программа «Check-up 65+»
+          .hatchet.hatchet--green
+            .hatchet__title Что входит в «Check-up 65+»?
+            .hatchet__content
+              ol
+                li <strong>Анализы</strong> (общий анализ крови; общий анализ мочи; биохимия крови: общий белок, альбумин, креатинин, цистатин С/расчетная СКФ, мочевая кислота, глюкоза, АЛТ, АСТ, электролиты, общий холестерин, сывороточное железо, вит В12, фолиевая кислота, ферритин, С-РБ, вит Д3, ТТГ, свТ4, гомоцистеин);
+                li <strong>ЭКГ</strong>;
+                li <strong>УЗИ</strong> брюшной полости и почек или мочевого пузыря с определением остаточной мочи;
+                li <strong>Динанометрия</strong>;
+                li <strong>Неинвазивное определение 15 гемодинамических показателей</strong> в т.ч. жесткости сосудов (выполнение реовазографии/осциллометрии высокого разрешения на аппарате АПКО-8РИЦ-М);
+                li <strong>Ортостатическая проба</strong>;
+                li <strong>УЗИ сердца (ЭХО-КГ)</strong>;
+                li <strong>Дуплексное сканирование брахиоцефальных артерий</strong> в т.ч. с интракраниальным исследованием;
+                li <strong>Первичная консультация врача-гериатра с проведением КГО</strong> – комплексной гериатрической оценки (включает оценку базовой и инструментальной активности в повседневной жизни, антропометрию, определение тестов для оценки мобильности и риска падений, скорость ходьбы, тесты на равновесие, оценку состояния питания, тестирование состояния когнитивных функций, оценку эмоционального состояния, определение безопасности лекарственной терапии);
+                li <strong>Холтеровское 24-часовое мониторирование ЭКГ</strong>;
+                li <strong>Консультация одного из врачей-специалистов</strong> (кардиолог, невролог, эндокринолог, травматолог, уролог, психиатр и др. по согласованию с пациентом);
+                li <strong>Повторная консультация врача-гериатра</strong> по итогам проведенного обследования с составлением индивидуального плана лечения и реабилитации;
+          p По итогам исследований и осмотров выдается индивидуальный план лечебно-реабилитационных мероприятий, с подробными рекомендациями по лекарственной терапии, диете, уровню физической активности, а также с рекомендациями для семьи и пациента по обустройству «безопасного» дома или необходимого тренинга по когнитивной деятельности с учетом реабилитационного потенциала больного.
+          blockquote
+            p Все указанные исследования (включая забор крови на анализы, УЗИ, ЭКГ и постановка холтеровского мониторирования ЭКГ) могут проводиться в том числе и на дому у пациента (при этом стоимость будет несколько выше).
+            p Подробнее о медицине для пожилых на дому: медицинском патронаже, гериатрических программах и медицинском уходе, по ссылке - <a href="https://homepatronage.ru/">www.homepatronage.ru</a>
+
+        .program-post__block
+          .welfare
+            .welfare__title
+              h3 Преимущества
+            .welfare__content
+              ul
+                li Индивидуальная программа и диагностический подход
+                li Необходимые исследования
+                li Участие опытных специалистов-гериатров
+                li Честная цена - ничего лишнего
+
+        .program-post__block
+          .program-cost
+            .program-cost__title
+              h2 Стоимость программы
+            .program-cost__container
+              .program-cost__text
+                .program-cost__name Check-up для пожилого человека (возраст 65+)
+                .program-cost__description Цена указана с учетом скидки 20%
+              .program-cost__value 26 926 ₽
+
+        .program-post__block
+          include components/doctor-call
+
+        .program-post__block
+          .recommend-list
+            .recommend-list__title: h2 Также рекомендуем обследования
+            .recommend-list__container
+              .recommend-list__item
+                a(href="#").article-card
+                  .article-card__picture: img(src="images/news_1.png")
+                  .article-card__info
+                    .article-card__main
+                      .article-card__date 20.09.21
+                      .article-card__title Международный день пожилого человека
+                    .article-card__btn
+                      .btn.btn-outline-primary Подробнее
+
+        .program-post__block
+          h2 Отзывы
+          include components/reviews/slider
+          a(href="reviews.html").btn.btn-more
+            span Смотреть все
+            svg(class="svg-icon" viewBox="0 0 19 13" width="19" height="13"): use(xlink:href="#svg-btn-arrow-right")
+
+  include components/map
+
+  include components/modals/example_modal
+
+block footer
+  include layouts/footer

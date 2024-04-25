@@ -1,0 +1,45 @@
+.header {
+  &__top {
+    background-color: #F5F5F5;
+  }
+  &__main {
+    border-bottom: 1px solid #D8D8DC;
+    @media(min-width: 1200px){
+      border-bottom: none;
+    }
+    .header-main {
+      @media(min-width: 1200px){
+        border-bottom: 1px solid #D8D8DC;
+      }
+    }
+  }
+  &__nav {
+    display: none;
+    @media(min-width: 1200px){
+      display: block;
+    }
+  }
+
+  .logo {
+    &--geromedicine {
+      width: 210px;
+      @media(min-width: 1200px){
+        width: 230px;
+      }
+    }
+    &--support {
+      display: none;
+      @media(min-width: 480px){
+        display: block;
+        width: 170px;
+      }
+
+      @media(min-width: 1200px){
+        width: 190px;
+      }
+    }
+  }
+
+}
+
+

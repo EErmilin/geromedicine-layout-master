@@ -1,0 +1,195 @@
+extends layouts/main
+
+block header
+  include layouts/header
+
+block content
+  nav(aria-label="breadcrumb" class="breadcrumb-place" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);")
+    .container
+      ol.breadcrumb
+        li.breadcrumb-item: a(href="/"): svg(class="svg-icon" viewBox="0 0 14 14" width="14" height="14"): use(xlink:href="#svg-breadcrumb-home")
+        li.breadcrumb-item.active Программы
+  .page__content
+    .container
+      h1.page__title Программы
+      .program-list(data-programs)
+        .program-list__search
+          .c-search
+            .c-search__field
+              input(type="text" placeholder="Поиск")
+            button(type="submit").c-search__submit
+              svg(class="svg-icon" viewBox="0 0 16 17" width="16" height="17"): use(xlink:href="#svg-search")
+        .program-list__tags
+          input(type="hidden" id="selectedTagsInput")
+          .program-tags.program-tags--selected(data-selected-tags)
+            .chips
+              .chips__title Выбранные теги:
+              .chips__container(data-selected-tags-container)
+          .program-tags(data-tags)
+            .chips
+              .chips__title Теги:
+              .chips__container(data-tags-container)
+                .chips__item
+                  label.chips__tag
+                    input(type="checkbox" data-tag="1" data-name="Гериатрия")
+                    span Гериатрия
+                .chips__item
+                  label.chips__tag
+                    input(type="checkbox" data-tag="2" data-name="Кардиология")
+                    span Кардиология
+                .chips__item
+                  label.chips__tag
+                    input(type="checkbox" data-tag="3" data-name="Программа")
+                    span Программа
+                .chips__item
+                  label.chips__tag
+                    input(type="checkbox" data-tag="4" data-name="Анализы")
+                    span Анализы
+                .chips__item
+                  label.chips__tag
+                    input(type="checkbox" data-tag="5" data-name="Диетология")
+                    span Диетология
+                .chips__item
+                  label.chips__tag
+                    input(type="checkbox" data-tag="6" data-name="Гастроэнтеролог")
+                    span Гастроэнтеролог
+                .chips__item
+                  label.chips__tag
+                    input(type="checkbox" data-tag="7" data-name="Диагностика")
+                    span Диагностика
+                .chips__item
+                  label.chips__tag
+                    input(type="checkbox" data-tag="8" data-name="Урология")
+                    span Урология
+                .chips__item
+                  label.chips__tag
+                    input(type="checkbox" data-tag="9" data-name="Невролог")
+                    span Невролог
+
+        .program-list__container
+          .program-list__item
+            .program-card
+              .program-card__container
+                .program-card__media
+                  .program-card__img: a(href="program.html"): img(src="images/program_1.png")
+                .program-card__info
+                  .program-card__top
+                    .program-card__title Check-up для пожилого человека (возраст 65+)
+                    .program-card__description Люди пожилого и старческого возраста (в отличие от более молодых) имеют множество заболеваний и проблем, которые являются причиной плохого самочувствия и значительного снижения качества их жизни. Проводить диагностику и лечение в таких случаях лучше доверить специалистам, знающим возрастные особенности пожилого человека.
+                  .program-card__bottom
+                    .program-card__tags
+                      .chips
+                        .chips__container
+                          .chips__item
+                            .chips__tag
+                              span Гериатрия
+                    .program-card__controls
+                      .program-card__price 26 926 ₽
+                      .program-card__btn
+                        a(href="program.html").btn.btn-outline-primary Подробнее
+          .program-list__item
+            .program-card
+              .program-card__container
+                .program-card__media
+                  .program-card__img: a(href="program.html"): img(src="images/program_2.png")
+                .program-card__info
+                  .program-card__top
+                    .program-card__title Программа «Здоровое сердце»
+                    .program-card__description В данной программе есть все, чтобы узнать в каком состоянии находится ваша сердечно-сосудистая система. Можно выявить органическую патологию сердца и сосудов, а также различные нарушения ритма. Анализ крови покажет есть ли у вас сердечно-сосудистая недостаточность и отклонения в обменных процессах метаболитов.
+                  .program-card__bottom
+                    .program-card__tags
+                      .chips
+                        .chips__container
+                          .chips__item
+                            .chips__tag
+                              span Кардиология
+                          .chips__item
+                            .chips__tag
+                              span Программа
+                          .chips__item
+                            .chips__tag
+                              span Анализы
+                    .program-card__controls
+                      .program-card__price 36 799 ₽
+                      .program-card__btn
+                        a(href="program.html").btn.btn-outline-primary Подробнее
+          .program-list__item
+            .program-card
+              .program-card__container
+                .program-card__media
+                  .program-card__img: a(href="program.html"): img(src="images/program_3.png")
+                .program-card__info
+                  .program-card__top
+                    .program-card__title Программа «Борьба с лишним весом»
+                    .program-card__description Лечащим врачом осуществляется контроль и анализ фактического питания (пациент предоставляет дневник питания в любом читаемом и понятном виде) и пищевого поведения (в каждый приём пищи пациент оценивает свои текущие состояния голода и насыщения). Врач даёт индивидуальные рекомендации по коррекции рациона и пищевого поведения.
+                  .program-card__bottom
+                    .program-card__tags
+                      .chips
+                        .chips__container
+                          .chips__item
+                            .chips__tag
+                              span Анализы
+                          .chips__item
+                            .chips__tag
+                              span Диетология
+                    .program-card__controls
+                      .program-card__price 14 270 ₽
+                      .program-card__btn
+                        a(href="program.html").btn.btn-outline-primary Подробнее
+          .program-list__item
+            .program-card
+              .program-card__container
+                .program-card__media
+                  .program-card__img: a(href="program.html"): img(src="images/program_4.png")
+                .program-card__info
+                  .program-card__top
+                    .program-card__title Программа «Здоровый желудок»
+                    .program-card__description Здоровье желудка влияет не только на нормальное пищеварение, но и на общее состояние человека. Заболевания желудочно-кишечного тракта могут не проявлять ощутимых симптомов долгое время. Чтобы увидеть патологию на ранних сроках и предотвратить ее переход в тяжелую форму, следует проходить диагностику желудочно-кишечного тракта и прислушиваться к рекомендациям врачей.
+                  .program-card__bottom
+                    .program-card__tags
+                      .chips
+                        .chips__container
+                          .chips__item
+                            .chips__tag
+                              span Гастроэнтеролог
+                          .chips__item
+                            .chips__tag
+                              span Диагностика
+                    .program-card__controls
+                      .program-card__price 20 353 ₽
+                      .program-card__btn
+                        a(href="program.html").btn.btn-outline-primary Подробнее
+          .program-list__item
+            .program-card
+              .program-card__container
+                .program-card__media
+                  .program-card__img: a(href="program.html"): img(src="images/program_5.png")
+                .program-card__info
+                  .program-card__top
+                    .program-card__title Программа «Здоровье почек»
+                    .program-card__description Работа почек состоит в фильтрации веществ из крови, которые токсичны для организма при повышенной концентрации.<br> К ним относятся аммиак, креатинин, мочевина и мочевая кислота. Все они выводятся из организма с мочой. Эта программа создана для выявления нарушений в работе почек еще до появления необратимых патологий.
+                  .program-card__bottom
+                    .program-card__tags
+                      .chips
+                        .chips__container
+                          .chips__item
+                            .chips__tag
+                              span Гастроэнтеролог
+                          .chips__item
+                            .chips__tag
+                              span Диагностика
+                    .program-card__controls
+                      .program-card__price 6 500 ₽
+                      .program-card__btn
+                        a(href="program.html").btn.btn-outline-primary Подробнее
+
+
+        .program-list__pagination
+          include components/pagination
+
+  include components/map
+
+  include components/modals/example_modal
+
+block footer
+  include layouts/footer

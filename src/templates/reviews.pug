@@ -1,0 +1,90 @@
+extends layouts/main
+
+block header
+  include layouts/header
+
+block content
+  nav(aria-label="breadcrumb" class="breadcrumb-place" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);")
+    .container
+      ol.breadcrumb
+        li.breadcrumb-item: a(href="/"): svg(class="svg-icon" viewBox="0 0 14 14" width="14" height="14"): use(xlink:href="#svg-breadcrumb-home")
+        li.breadcrumb-item.active Отзывы
+  .page__content
+    .container
+      h1.page__title Отзывы
+      .reviews-list.reviews-list--text
+        .reviews-list__head
+          .reviews-list__button
+            .btn.btn-secondary(data-bs-toggle="modal" data-bs-target="#reviewAddModal") Оставить отзыв
+        .reviews-list__container
+          .reviews-list__item
+            .review-card
+              .review-card__head
+                .review-card__name Марина Степановна
+                .review-card__date 25.10.21
+              .review-card__text Очень толковый врач, произвел очень хорошее впечатление. У меня была достаточно не простая ситуация после удаления зуба, распухла щека. К местной стоматологии я не прикреплена, а в поликлинике сказали, что это не к ним. Никто не хотел мне выписать больничный. Руслан Иванович провел осмотр, выписал мне рецепт и больничный, ответил на все интересующие меня вопросы, посоветовал сдать кровь. Компетентный, вежливый, уважительный доктор. Я осталась довольна приемом. Большая ему благодарность за то, что он за меня взялся и не отправил, как другие врачи!
+
+          .reviews-list__item
+            .review-card
+              .review-card__head
+                .review-card__name Елена
+                .review-card__date 22.10.21
+              .review-card__text Вызывала врача на дом. Максим Владимирович общительный, внимательный и добрый доктор. Чувствуется желание помочь. Врач ответил на все мои вопросы, всё доступно объяснил, осмотрел и назначил анализы. Посоветовал обратиться к кардиологу. Приемом я осталась довольна.
+
+          .reviews-list__item
+            .review-card
+              .review-card__head
+                .review-card__name Анастасия
+                .review-card__date 06.10.21
+              .review-card__text Шутова Татьяна Николаевна отличный специалист! Ее цель - действительно помочь, а не просто выслушать. Задавала грамотные вопросы, исходя из которых и выяснялись источники и причины проблемы. Дала полезные рекомендации, методики. Очень благодарна врачу за оказанную помощь!
+          .reviews-list__item
+            .review-card
+              .review-card__head
+                .review-card__name Жанна
+                .review-card__date 23.09.21
+              .review-card__text Быстрая запись к врачу, приняли в этот же день, невролог спокойный, понимающий и опытный врач.
+
+          .reviews-list__item
+            .review-card
+              .review-card__head
+                .review-card__name Надежда
+                .review-card__date 22.09.21
+              .review-card__text Посетила клинику впервые. Очень  рада , что обратилась именно сюда.  Получила качественное и грамотное обслуживание. Доктор Носова А Г.на УЗИ все подробно описала и показала. Хороший доктор и приятный  человек. Клиника мне подходит по всем критериям. Планирую обращаться неоднократно только сюда. Благодарю персонал за качественное обслуживание.
+
+          .reviews-list__item
+            .review-card
+              .review-card__head
+                .review-card__name Ирина Тимофеевна
+                .review-card__date 16.09.21
+              .review-card__text Очень благодарны такому внимательному и знающему доктору Тихонову Андрею Владимировичу. Он быстро и аргументированно поставил диагноз. Назначил лечение. Все доступно объяснил. Желаем ему успехов в работе, здоровья и всего самого хорошего. - Смирновы.
+
+          .reviews-list__item
+            .review-card
+              .review-card__head
+                .review-card__name Татьяна Северенкова
+                .review-card__date 13.09.21
+              .review-card__text Прекрасная клиника! Оказывает помошь больным на дому (УЗИ, консультации доктора, капельницы и т.д.).Профессиональный, неравнодушный персонал. Огромная благодарность лечащему врачу Гниденко Руслану Ивановичу за помощь, отзывчивость, профессионализм! Хочется сказать огромное спасибо медсестрам клиники! Они успешно "находили вены там, где их почти нет". Особая благодарность от меня и моей дочери медсестре Соне. В трудные моменты она не просто отлично выполняла свою работу, она поддерживала, советовала, заботилась. Спасибо, Соня! Безусловно рекомендую медицинскую клинику!
+
+          .reviews-list__item
+            .review-card
+              .review-card__head
+                .review-card__name Видео-отзыв
+                .review-card__date 30.08.21
+              .review-card__video
+                .embed-responsive.embed-responsive-16by9
+                  iframe(width='560' height='315' src='https://www.youtube.com/embed/jqVG0H80Y7k' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+
+          .reviews-list__item
+            .review-card
+              .review-card__head
+                .review-card__name Наталья П.
+                .review-card__date 26.08.21
+              .review-card__text Чудесный доктор дерматолог, толковая, искренне заботливая, аккуратная, все делала и объясняла с душой и без иногда свойственного врачам высокомерия. Единственное, долговато продержали на ресепшн, т.к. администратор постоянно отвлекалась то на сотрудников, то на других пациентов, которым "по-быстрому". Было очень неприятно. Но врач полностью сняла этот осадок.
+
+        .reviews-list__pagination
+          include components/pagination
+
+  include components/map
+
+block footer
+  include layouts/footer

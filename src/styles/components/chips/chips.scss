@@ -1,0 +1,74 @@
+.chips {
+  &__title {
+    font-weight: 600;
+    font-size: 18px;
+    margin: 0 0 10px;
+    @media(min-width: 992px){
+      font-size: 20px;
+    }
+  }
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: -5px -5px 0;
+  }
+
+  &__item {
+    padding: 5px;
+    height: 38px;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.1s, visibility 0.1s;
+    display: block;
+  }
+  &__tag, &__btn {
+    display: flex;
+    vertical-align: middle;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 15px;
+    height: 100%;
+    align-items: center;
+    padding: 0 12px;
+    span {
+      line-height: 1;
+    }
+  }
+  &__tag {
+    background: #F5F5F5;
+    color: #3C3C51;
+    transition: all 0.2s;
+  }
+  &__btn {
+    background: #FBE3DD;
+    color: #FF6A29;
+    cursor: pointer;
+    &:hover {
+      color: #F88F6D;
+    }
+  }
+  &__close {
+    margin: 0 0 0 7px;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+    display: flex;
+    .svg-icon {
+      use {
+        stroke: #3C3C51;
+      }
+    }
+  }
+  label {
+    &.chips__tag {
+      cursor: pointer;
+      input {
+        display: none;
+      }
+      &:hover, &.active {
+        background: #D8D8DC;
+      }
+    }
+  }
+}

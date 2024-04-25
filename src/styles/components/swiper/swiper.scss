@@ -1,0 +1,47 @@
+.swiper-horizontal {
+  & > .swiper-pagination-bullets {
+    .swiper-pagination-bullet {
+      margin: 0 3px;
+    }
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
+  opacity: 1;
+  background: #ffffff;
+}
+
+.swiper-pagination-bullet-active {
+  background: #FF6929;
+  width: 13px;
+  border-radius: 3px;
+}
+
+.swiper-btn-prev, .swiper-btn-next {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(60, 60, 81, 0.15);
+  border-radius: 50%;
+  background: #ffffff;
+  transition: all 0.2s;
+  z-index: 20;
+  &:hover {
+    background: #FF6929;
+    .svg-icon {
+      use {
+        stroke: #ffffff;
+      }
+    }
+  }
+  .svg-icon {
+    use {
+      stroke: #FF6929;
+
+    }
+  }
+}

@@ -1,0 +1,94 @@
+extends layouts/main
+
+block header
+  include layouts/header
+
+block content
+  nav(aria-label="breadcrumb" class="breadcrumb-place")
+    .container
+      ol.breadcrumb
+        li.breadcrumb-item: a(href="/"): svg(class="svg-icon" viewBox="0 0 14 14" width="14" height="14"): use(xlink:href="#svg-breadcrumb-home")
+        li.breadcrumb-item: a(href="services.html") Услуги
+        li.breadcrumb-item.active Инъекционная косметология
+  .page__content
+    .container
+      .service-post
+        .service-post__header
+          .service-header
+            .service-header__container
+              .service-header__info
+                .service-header__top
+                  h1 Прием врача-эндокринолога на дому
+                  p Если Вы не можете самостоятельно добраться до клиники, мы рекомендуем вызвать врача-эндокринолога на дом. Специалист приедет в удобное время и проведет консультацию в привычных и комфортных для Вас условиях.
+                  p: strong Наши врачи имеют все необходимое оборудование для экспресс-диагностики и постановки точного диагноза на основании полученных данных.
+                .service-header__bottom
+                  a(href="#").btn.btn-secondary Позвонить
+              .service-header__picture
+                img(src="images/service-doctor-home-picture.jpg")
+
+        .service-post__content.simple-text
+          h2 Поводы вызвать эндокринолога на дом:
+          ul
+            li слабость и утомляемость без видимых причин;
+            li дрожь в конечностях;
+            li учащенное сердцебиение;
+            li потливость;
+            li повышенная или пониженная масса тела;
+            li беспричинное подавленное настроение;
+            li проблемы с концентрацией внимания;
+            li нарушения сна;
+            li ухудшение качества волос и ногтей;
+            li женское и мужское бесплодие без выявленных причин.
+          p Женщинам следует обратиться к данному специалисту при планировании беременности, для подбора контрацептивов и с наступлением менопаузы в рамках профилактического осмотра.
+
+        .service-post__block
+          .question-call
+            .question-call__info
+              h2.question-call__title У Вас возникли вопросы?
+            .question-call__btn
+              a(href="#").btn.btn-primary Позвонить
+
+        .service-post__block
+          .welfare
+            h3 Преимущества
+            ul
+              li Высокий профессионализм. Прием ведут врачи высшей категории, доктора и кандидаты медицинских наук.
+              li Возможность оперативной помощи на дому. Вызов врача, проведение диагностики и лечебных процедур, взятие анализов на дому.
+              li Скидки и акции. Мы регулярно проводим сезонные акции и предоставляем скидки на актуальные услуги.
+
+        .service-post__block
+          .service-prices
+            .service-prices__title: h2 Наши цены
+            .service-prices__container
+              .service-prices__item
+                .service-prices__name Прием врача-эндокринолога на дому в пределах МКАД*
+                .service-prices__cost от 2 900 ₽
+              .service-prices__item
+                .service-prices__name 2-я зона выезда (до 5 км от МКАД)
+                .service-prices__cost + 450 ₽
+              .service-prices__item
+                .service-prices__name 3-я зона выезда (от 5 до 10 км от МКАД)
+                .service-prices__cost + 950 ₽
+              .service-prices__item
+                .service-prices__name 4-я зона выезда (от 10 км и до 20 км от МКАД)
+                .service-prices__cost + 2 950 ₽
+              .service-prices__item
+                .service-prices__name 5-я зона выезда (от 20 и более км от МКАД)
+                .service-prices__cost + 4 950 ₽
+              .service-prices__item
+                .service-prices__name 6-я зона выезда - 100 км и более от МКАД
+                .service-prices__cost +24 900 ₽
+              .service-prices__item
+                .service-prices__name *Пакет дополнительных консультативных услуг для пациента с гериатрическим/коморбидным статусом
+                .service-prices__cost + 2 450 ₽
+
+        .service-post__block
+
+
+        .service-post__block
+          include components/doctor-call
+
+  include components/map
+
+block footer
+  include layouts/footer

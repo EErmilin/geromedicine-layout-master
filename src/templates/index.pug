@@ -1,0 +1,236 @@
+extends layouts/main
+
+block header
+  include layouts/header
+
+block content
+  .promo-slider-place
+    .container
+      include components/promo-slider
+
+  section.section.section--popular-services
+    .container
+      .section__head
+        .section__title Популярные услуги
+      .section__content
+        include components/popular-services/slider
+      .section__bottom
+        a(href="doctors.html").btn.btn-more
+          span Смотреть все
+          svg(class="svg-icon" viewBox="0 0 19 13" width="19" height="13"): use(xlink:href="#svg-btn-arrow-right")
+
+  section.section.section--activities
+    .container
+      .activities
+        .activities__bg
+        .activities__content
+          .activities__head
+            .activities__title Наши направления
+            .activities__tabs
+              ul.nav.nav-pills(id="pills-tab" role="tablist")
+                li.nav-item(role="presentations")
+                  button.nav-link.active(id="pills-reception-tab" data-bs-toggle="pill" data-bs-target="#pills-reception" type="button" role="tab" aria-controls="pills-reception" aria-selected="true") Прием в поликлинике
+                li.nav-item(role="presentations")
+                  button.nav-link(id="pills-doctor-tab" data-bs-toggle="pill" data-bs-target="#pills-doctor" type="button" role="tab" aria-controls="pills-doctor" aria-selected="false") Врач на дом
+                li.nav-item(role="presentations")
+                  button.nav-link(id="pills-diagnostics-tab" data-bs-toggle="pill" data-bs-target="#pills-diagnostics" type="button" role="tab" aria-controls="pills-diagnostics" aria-selected="false") Диагностика
+                li.nav-item(role="presentations")
+                  button.nav-link(id="pills-analyzes-tab" data-bs-toggle="pill" data-bs-target="#pills-analyzes" type="button" role="tab" aria-controls="pills-analyzes" aria-selected="false") Анализы
+                li.nav-item(role="presentations")
+                  button.nav-link(id="pills-ultrasound-tab" data-bs-toggle="pill" data-bs-target="#pills-ultrasound" type="button" role="tab" aria-controls="pills-ultrasound" aria-selected="false") УЗИ
+          .activities__container
+            .activities__tab-content.scrollbar
+              .tab-content(id="pills-tabContent")
+                .tab-pane.fade.show.active(id="pills-reception" role="tabpanel" aria-labelledby="pills-reception-tab")
+                  ul.activities__list
+                    li.activities__item
+                      a(href="#").activities__link Биоревитализация
+                    li.activities__item
+                      a(href="#").activities__link Внутрисуставные инъекции с гиалуроновой кислотой
+                    li.activities__item
+                      a(href="#").activities__link Гастроэнтеролог
+                    li.activities__item
+                      a(href="#").activities__link Гериатр
+                    li.activities__item
+                      a(href="#").activities__link Гинеколог
+                    li.activities__item
+                      a(href="#").activities__link Дерматовенеролог
+                    li.activities__item
+                      a(href="#").activities__link Инъекционная косметология
+                    li.activities__item
+                      a(href="#").activities__link Капельницы после COVID-19
+                    li.activities__item
+                      a(href="#").activities__link Кардиолог
+                    li.activities__item
+                      a(href="#").activities__link Контурная пластика
+                    li.activities__item
+                      a(href="#").activities__link Косметические процедуры
+                    li.activities__item
+                      a(href="#").activities__link Косметический массаж
+                    li.activities__item
+                      a(href="#").activities__link Лечение акне
+                    li.activities__item
+                      a(href="#").activities__link Лечение гипергидроза
+                    li.activities__item
+                      a(href="#").activities__link Мезонити
+                    li.activities__item
+                      a(href="#").activities__link Мезотерапия
+                    li.activities__item
+                      a(href="#").activities__link Невролог
+                    li.activities__item
+                      a(href="#").activities__link Озонотерапия
+                    li.activities__item
+                      a(href="#").activities__link Отоларинголог
+                    li.activities__item
+                      a(href="#").activities__link Офтальмолог
+                    li.activities__item
+                      a(href="#").activities__link Паравертебральные блокады
+                    li.activities__item
+                      a(href="#").activities__link Прием врача-косметолога
+                    li.activities__item
+                      a(href="#").activities__link Психиатр
+                    li.activities__item
+                      a(href="#").activities__link Терапевт
+
+                .tab-pane.fade(id="pills-doctor" role="tabpanel" aria-labelledby="pills-doctor-tab")
+                  p Вкладка Врач на дом
+                .tab-pane.fade(id="pills-diagnostics" role="tabpanel" aria-labelledby="pills-diagnostics-tab")
+                  p Вкладка Диагностика
+                .tab-pane.fade(id="pills-analyzes" role="tabpanel" aria-labelledby="pills-analyzes-tab")
+                  p Вкладка Анализы
+                .tab-pane.fade(id="pills-ultrasound" role="tabpanel" aria-labelledby="pills-ultrasound-tab")
+                  p Вкладка УЗИ
+
+  section.section.section--advantages
+    .advantages
+      .advantages__bg
+      .container
+        .advantages__content
+          .advantages__title <span>Геромедицина</span> - надежная клиника с опытными врачами
+          .advantages__container
+            .advantages__item
+              .advantages__number <span>11</span>тыс.
+              .advantages__text Довольных пациентов
+            .advantages__item
+              .advantages__number <span>12</span> лет
+              .advantages__text Опыт работы клиники
+            .advantages__item
+              .advantages__number <span>30</span>
+              .advantages__text Направлений лечения
+            .advantages__item
+              .advantages__number <span>42</span>
+              .advantages__text Врача и медицинских сестер
+          .advantages__description Клиника для Детей и Взрослых на Открытом шоссе — это многопрофильная клиника, расположенная вблизи ст. м. Бульвар Рокоссовского. Услуги оказываются как в медицинском центре, так и на дому (в том числе за пределами МКАД).
+
+  section.section.section--doctors
+    .container
+      .section__head
+        .section__title Врачи
+      .section__content
+        include components/doctors/slider
+
+      .section__bottom
+        a(href="doctors.html").btn.btn-more
+          span Все врачи
+          svg(class="svg-icon" viewBox="0 0 19 13" width="19" height="13"): use(xlink:href="#svg-btn-arrow-right")
+        .cta-inset.cta-inset--green
+          .cta-inset__container
+            .cta-inset__message В нашей клинике Вас ждёт радушный прием, чуткое отношение и медицинский сервис высокого уровня. Здоровье и качество жизни пациента для нас всегда в приоритете.
+            .cta-inset__btn
+              a.c-btn.c-btn--green(href="#")
+                .c-btn__content
+                  .c-btn__icon
+                    svg(class="svg-icon" viewBox="0 0 21 21" width="21" height="21"): use(xlink:href="#svg-writing-pen")
+                  .c-btn__text Записаться на прием
+
+  section.section.section--stock
+    .container
+      .section__head
+        .section__title Акции и спецпредложения
+      .section__content
+        .stock-list
+          .stock-list__container
+            .stock-list__item
+              a(href="stock-detail.html").stock-card
+                .stock-card__picture: img(src="images/promo_1.jpg")
+                .stock-label.stock-label--red Акция
+            .stock-list__item
+              a(href="stock-detail.html").stock-card
+                .stock-card__picture: img(src="images/promo_2.jpg")
+                .stock-label.stock-label--red Акция
+            .stock-list__item
+              a(href="stock-detail.html").stock-card
+                .stock-card__picture: img(src="images/promo_3.jpg")
+                .stock-label.stock-label--red Акция
+            .stock-list__item
+              a(href="stock-detail.html").stock-card
+                .stock-card__picture: img(src="images/promo_4.jpg")
+                .stock-label.stock-label--red Акция
+      .section__bottom
+        a(href="#").btn.btn-more
+          span Все акции
+          svg(class="svg-icon" viewBox="0 0 19 13" width="19" height="13"): use(xlink:href="#svg-btn-arrow-right")
+
+  section.section.section--reviews
+    .container
+      .section__head
+        .section__title Отзывы
+      .section__content
+        include components/reviews/slider
+      .section__bottom
+        a(href="reviews.html").btn.btn-more
+          span Смотреть все
+          svg(class="svg-icon" viewBox="0 0 19 13" width="19" height="13"): use(xlink:href="#svg-btn-arrow-right")
+
+  section.section.section--news
+    .container
+      .section__head
+        .section__title Новости и статьи
+      .section__content
+        .article-list.article-list--main
+          .article-list__container
+            .article-list__item
+              a(href="article-detail.html").article-card
+                .article-card__picture: img(src="images/news_1.png")
+                .article-card__info
+                  .article-card__main
+                    .article-card__date 20.09.21
+                    .article-card__title Международный день пожилого человека
+                  .article-card__btn
+                    .btn.btn-outline-primary Читать
+            .article-list__item
+              a(href="article-detail.html").article-card
+                .article-card__picture: img(src="images/news_2.png")
+                .article-card__info
+                  .article-card__main
+                    .article-card__date 19.05.20
+                    .article-card__title О важности вовлечения частных клиник в медико-социальный патронаж
+                  .article-card__btn
+                    .btn.btn-outline-primary Читать
+            .article-list__item
+              a(href="article-detail.html").article-card
+                .article-card__picture: img(src="images/news_3.png")
+                .article-card__info
+                  .article-card__main
+                    .article-card__date 06.04.20
+                    .article-card__title Описана типичная жертва коронавируса
+                  .article-card__btn
+                    .btn.btn-outline-primary Читать
+            .article-list__item
+              a(href="article-detail.html").article-card
+                .article-card__picture: img(src="images/news_4.png")
+                .article-card__info
+                  .article-card__main
+                    .article-card__date 19.05.20
+                    .article-card__title Профилактика и лечение остеопороза у пожилых людей
+                  .article-card__btn
+                    .btn.btn-outline-primary Читать
+      .section__bottom
+        a(href="articles.html").btn.btn-more
+          span Смотреть все
+          svg(class="svg-icon" viewBox="0 0 19 13" width="19" height="13"): use(xlink:href="#svg-btn-arrow-right")
+
+  include components/map
+
+block footer
+  include layouts/footer

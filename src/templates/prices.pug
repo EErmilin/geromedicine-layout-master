@@ -1,0 +1,85 @@
+extends layouts/main
+
+block header
+  include layouts/header
+
+block content
+  nav(aria-label="breadcrumb" class="breadcrumb-place")
+    .container
+      ol.breadcrumb
+        li.breadcrumb-item: a(href="/"): svg(class="svg-icon" viewBox="0 0 14 14" width="14" height="14"): use(xlink:href="#svg-breadcrumb-home")
+        li.breadcrumb-item.active Услуги и цены
+  .page__content
+    .container
+      h1.page__title Услуги и цены
+      .price-list
+        .price-list__description
+          h3 Прием в клинике и вызов врача на дом
+          p Стоимость медицинского патронажа рассчитывается индивидуально в зависимости от потребностей пациента — звоните!
+          p 8.00 - 21.00 по будням (Пн-Пт)<br>10.00 - 18.00 в выходные дни (Сб, Вс.)<br>В праздничные и предпраздничные дни - сокращенный рабочий день.
+          blockquote Для вызова врача на дом нажмите на кнопку в правом нижнем углу - «Вызов врача».
+
+        .price-list__search
+          .c-search
+            .c-search__field
+              input(type="text" placeholder="Поиск")
+            button(type="submit").c-search__submit
+              svg(class="svg-icon" viewBox="0 0 16 17" width="16" height="17"): use(xlink:href="#svg-search")
+        .price-list__container
+          .price-list__item
+            .price-list__panel
+              a.price-list__link(href="https://geromedik.ru/direction/testirovanie-na-covid-19") Тестирование на COVID-19
+              .price-list__toggle
+                svg(class="svg-icon" viewBox="0 0 11 9" width="11" height="9"): use(xlink:href="#svg-price-panel-toggle")
+          .price-list__item.expanded
+            .price-list__panel
+              a.price-list__link(href="#") Процедуры озонотерапии
+              .price-list__toggle
+                svg(class="svg-icon" viewBox="0 0 11 9" width="11" height="9"): use(xlink:href="#svg-price-panel-toggle")
+            .price-list-sub
+              a(href="https://geromedik.ru/service/ozonoterapiya-dlya-lica").price-list-sub__item
+                .price-list-sub__name Озонотерапия для лица
+                .price-list-sub__value от 500 ₽
+              a(href="https://geromedik.ru/service/ozonoterapiya-dlya-tela").price-list-sub__item
+                .price-list-sub__name Озонотерапия для тела
+                .price-list-sub__value от 510 ₽
+          .price-list__item.expanded
+            .price-list__panel
+              a.price-list__link(href="https://geromedik.ru/direction/prp-terapiya") PRP-терапия
+              .price-list__toggle
+                svg(class="svg-icon" viewBox="0 0 11 9" width="11" height="9"): use(xlink:href="#svg-price-panel-toggle")
+            .price-list-sub
+              a(href="https://geromedik.ru/service/programma-po-dermatologii-plazmoterapiya").price-list-sub__item
+                .price-list-sub__name Программа по дерматологии «Плазмотерапия»
+                .price-list-sub__value 14 359 ₽
+          .price-list__item.expanded
+            .price-list__panel
+              a(href="#").price-list__link Гериатрия
+              .price-list__toggle
+                svg(class="svg-icon" viewBox="0 0 11 9" width="11" height="9"): use(xlink:href="#svg-price-panel-toggle")
+            .price-list-sub
+              a(href="#").price-list-sub__item
+                .price-list-sub__name Прием врача-гериатра на дому
+                .price-list-sub__value 4 700 ₽
+              a(href="#").price-list-sub__item
+                .price-list-sub__name Прием врача-гериатра в медицинском центре
+                .price-list-sub__value 1700 ₽
+              a(href="#").price-list-sub__item
+                .price-list-sub__name Комплексная гериатрическая оценка
+                .price-list-sub__value 4 900 ₽
+              a(href="#").price-list-sub__item
+                .price-list-sub__name Check-up для пожилого человека (возраст 65+)<span>Цена указана с учетом скидки 20%</span>
+                .price-list-sub__value 33 658 ₽
+              a(href="#").price-list-sub__item
+                .price-list-sub__name Услуги сиделок
+                .price-list-sub__value от 1 800 ₽
+              a(href="#").price-list-sub__item
+                .price-list-sub__name Базовый check-up: выезд на дом
+                .price-list-sub__value 14 670 ₽
+
+
+
+  include components/map
+
+block footer
+  include layouts/footer

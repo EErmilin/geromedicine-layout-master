@@ -1,0 +1,36 @@
+.cta-inset {
+  border-radius: 20px;
+  padding: 20px;
+  @media(min-width: 1200px){
+    border-radius: 62px;
+    padding: 20px 30px 20px 50px;
+  }
+  &--green {
+    background: #EDF1D3;
+  }
+  &__container {
+    @media(min-width: 768px){
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__message {
+    font-size: 16px;
+    line-height: 1.4;
+    flex: 0 1 auto;
+    margin: 0 0 15px;
+    @media(min-width: 768px){
+      margin: 0;
+    }
+    @media(min-width: 1200px){
+      font-size: 20px;
+    }
+  }
+  &__btn {
+    flex-shrink: 0;
+    width: 100%;
+    @media(min-width: 576px){
+      width: auto;
+    }
+  }
+}

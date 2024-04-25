@@ -1,0 +1,68 @@
+extends layouts/main
+
+block header
+  include layouts/header
+
+block content
+  nav(aria-label="breadcrumb" class="breadcrumb-place")
+    .container
+      ol.breadcrumb
+        li.breadcrumb-item: a(href="/"): svg(class="svg-icon" viewBox="0 0 14 14" width="14" height="14"): use(xlink:href="#svg-breadcrumb-home")
+        li.breadcrumb-item.active Контакты
+
+  .page__content
+    .container
+      .contacts-post
+        .contacts-post__section
+          .contacts-header
+            .contacts-header__container
+              .contacts-header__info
+                h1 Контакты
+                h3 Где нас найти?
+                p ООО «Клиника для детей и взрослых на Открытом шоссе»<br>ПРОЕКТ: «ГЕРОМЕДИЦИНА» – клиника медицинского патронажа и гериатрии.
+                p Москва, Открытое шоссе, дом 12, стр.2, эт.1<br>1 мин от ст.м. Бульвар Рокоссовского
+              .contacts-header__map
+                .contacts-map
+                  <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae68f42cb23099a3be9a721c0a4dfc5fcc502100375ac00c6941008c9172c0c87&amp;lang=ru_RU&amp;scroll=true"></script>
+        .contacts-post__section
+          p <strong>Маршрут от метро «Бульвар Рокоссовского»</strong> (последняя остановка радиальной Сокольнической ветки метро, №1, красного цвета):
+          p При движении из центра – «Выход в город» из последнего вагона, далее повернуть направо до конца подземного перехода. Перейти трамвайные пути и дорогу на светофоре. Далее - по Тюменскому проезду (мимо магазина «Электротовары»). Время маршрута – 5 мин.
+          p <strong>Маршрут от МЦК ст. «Бульвар Рокоссовского»:</strong>
+          p Выход в сторону – ул. Открытое шоссе, через переход вниз по эскалатору. После выхода пройти прямо до конца торговой зоны до входа в метро. Пройти весь подземный переход, далее перейти трамвайные пути и дорогу на светофоре. Продолжать движение прямо по Тюменскому проезду (мимо магазина «Электротовары»). 1 минута от м. Бульвар Рокоссовского.
+        .contacts-post__section
+          .contacts-details
+            .contacts-details__container
+              .contacts-details__info
+                h3 ООО «Клиника для детей и взрослых на Открытом шоссе»
+                p ПРОЕКТ : «ГЕРОМЕДИЦИНА» – клиника медицинского патронажа и гериатрии.
+                ul.contacts-list
+                  li.contacts-list__item
+                    svg(class="svg-icon" viewBox="0 0 13 13" width="13" height="13"): use(xlink:href="#svg-contact-address")
+                    span Россия, 107370, Москва, Открытое шоссе, дом 12, стр.2, эт.1
+                  li.contacts-list__item.contacts-list__item--phone
+                    svg(class="svg-icon" viewBox="0 0 13 13" width="13" height="13"): use(xlink:href="#svg-contact-phone")
+                    span: a(href="tel:+74950232270") +7 (495) 023-22-70
+                .contacts-social
+                  a(href="viber://add?number=79253775055" class="btn-social btn-social--viber") Viber
+                  a(href="https://wa.me/79253775055" class="btn-social btn-social--whatsapp") WhatsApp
+                  a(href="tg://resolve?domain=geromedicina" class="btn-social btn-social--telegram") Telegram
+                ul.contacts-list
+                  li.contacts-list__item
+                    svg(class="svg-icon" viewBox="0 0 13 13" width="13" height="13"): use(xlink:href="#svg-contact-email")
+                    span: a(href="mailto:info@geromedik.ru") info@geromedik.ru
+                  li.contacts-list__item
+                    svg(class="svg-icon" viewBox="0 0 13 13" width="13" height="13"): use(xlink:href="#svg-contact-site")
+                    span: a(href="https://geromedik.ru/") www.geromedik.ru
+              .contacts-details__video
+                .embed-responsive.embed-responsive-16by9
+                  iframe(src='https://www.youtube.com/embed/gMCFIIUoSus' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+        .contacts-post__section
+          blockquote
+            p Запись на приём на территории клиники:<br><strong>ПН-ПТ: с 8:00 до 21:00, Сб-Вс: c 10:00 до 18:00</strong>
+            p Запись на консультацию на дому:<br><strong>Время выбирается индивидуально.</strong>
+
+  include components/subscribe
+  include components/modals/example_modal
+
+block footer
+  include layouts/footer

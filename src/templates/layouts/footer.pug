@@ -1,0 +1,67 @@
+footer.footer.page__footer
+  .container
+    .footer__logo
+      .footer-logo__main
+        a(href="#").logo.logo--geromedicine: img(src="images/logo.svg")
+      .footer-logo__additional
+        a(href="#").logo.logo--support: img(src="images/logo-support-color.svg")
+        a(href="https://www.alfastrah.ru/" target="_blank").logo.logo--alfa-insurance: img(src="images/logo-alpha-insurance.svg")
+        a(href="https://www.rsb.ru/" target="_blank").logo.logo--standard-bank: img(src="images/logo-russian-standard-bank.svg")
+        a(href="#").logo.logo--sogaz-med: img(src="images/logo-sogaz-med.svg")
+    .footer__nav
+      nav.footer-nav
+        li: a(href="about.html") О клинике
+        li: a(href="#") Услуги
+        li: a(href="programs.html") Программы
+        li: a(href="#") Запись к врачу
+        li: a(href="#") Выезд на дом
+        li: a(href="stock.html") Акции
+        li: a(href="doctors.html") Врачи
+        li: a(href="articles.html") Статьи
+        li: a(href="prices.html") Цены
+        li: a(href="contacts.html") Контакты
+    .footer__bottom
+      .footer-bottom
+        .footer-bottom__container
+          .footer-bottom__controls
+            .footer-bottom__search
+              .c-search
+                .c-search__field
+                  input(type="text" placeholder="Услуга, врач, вопрос")
+                button(type="submit").c-search__submit
+                  svg(class="svg-icon" viewBox="0 0 16 17" width="16" height="17"): use(xlink:href="#svg-search")
+            .footer-bottom__buttons
+              a.c-btn.c-btn--folded.c-btn--green(href="Онлайн консультация")
+                .c-btn__content
+                  .c-btn__icon
+                    svg(class="svg-icon" viewBox="0 0 22 22" width="22" height="22"): use(xlink:href="#svg-video-camera")
+                  .c-btn__text.c-btn__text--w100 Онлайн<br>консультация
+              .c-btn.c-btn--folded.c-btn--green(data-bs-toggle="modal" data-bs-target="#doctorAppointmentModal")
+                .c-btn__content
+                  .c-btn__icon
+                    svg(class="svg-icon" viewBox="0 0 21 21" width="21" height="21"): use(xlink:href="#svg-writing-pen")
+                  .c-btn__text.c-btn__text--w85 Записаться<br>на прием
+              .c-btn.c-btn--folded.c-btn--green(data-bs-toggle="modal" data-bs-target="#backCallModal")
+                .c-btn__content
+                  .c-btn__icon
+                    svg(class="svg-icon" viewBox="0 0 23 23" width="23" height="23"): use(xlink:href="#svg-phone")
+                  .c-btn__text.c-btn__text--w130 Заказать<br>обратный звонок
+              .c-btn.c-btn--folded.c-btn--pink(data-bs-toggle="modal" data-bs-target="#doctorCallModal")
+                .c-btn__content
+                  .c-btn__icon
+                    svg(class="svg-icon" viewBox="0 0 26 25" width="26" height="25"): use(xlink:href="#svg-ambulance")
+                  .c-btn__text.c-btn__text--w50 Вызов<br>врача
+              a.c-btn.c-btn--folded.c-btn--whatsapp(href="https://wa.me/79253775055")
+                .c-btn__content
+                  .c-btn__icon
+                    svg(class="svg-icon" viewBox="0 0 23 23" width="23" height="23"): use(xlink:href="#svg-whatsapp")
+                  .c-btn__text.c-btn__text--w85 Написать<br>в Whatsapp
+          .footer-bottom__social
+            ul.social
+              li: a(href="https://www.facebook.com/geromedicina/?hc_ref=ARTm55PBwwmHx7ECEX6pk_Tu9DE1wyX-1OSccq5WtASQqkoCMJLwwbU58n_topUOUvc&fref=nf"): img(src="images/social_fb.svg")
+              li: a(href="https://www.instagram.com/geromedik/"): img(src="images/social_inst.svg")
+              li: a(href="https://vk.com/geromedicina"): img(src="images/social_vk.svg")
+              li: a(href="https://wa.me/79253775055"): img(src="images/social_wa.svg")
+    .footer__disclaimer
+      | Сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями ч. 2 ст. 437 Гражданского кодекса РФ. Чтобы получить подробную информации о стоимости услуг, обращайтесь, пожалуйста, к администраторам клиники.
+

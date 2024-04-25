@@ -1,0 +1,27 @@
+.search-result {
+  &__item {
+    padding: 0 0 25px;
+    border-bottom: 1px solid rgba(60, 60, 81, 0.2);
+    &:not(:last-child){
+      margin: 0 0 35px;
+    }
+    .highlight {
+      background: #EDF1D3;
+    }
+  }
+  &__title {
+    font-weight: 600;
+    margin: 0 0 20px;
+    font-size: 18px;
+    @media (min-width: 1200px) {
+      font-size: 20px;
+    }
+    a {
+      color: inherit;
+    }
+
+  }
+  &__text {
+
+  }
+}

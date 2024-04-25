@@ -1,0 +1,79 @@
+.reviews-slider {
+  padding: 10px 10px 28px 10px;
+  margin: 0 -10px;
+  overflow: visible;
+  @media(min-width: 1400px){
+    overflow: hidden;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: linear-gradient(to left, rgba(247, 247, 247, 0), #ffffff);
+      z-index: 10;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 100%;
+      top: 0;
+      right: 0;
+      background: linear-gradient(to right, rgba(247, 247, 247, 0), #ffffff);
+      z-index: 10;
+    }
+  }
+  &:hover {
+    .swiper-btn-prev, .swiper-btn-next {
+      opacity: 1;
+    }
+  }
+  .swiper-slide {
+    width: 290px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(60, 60, 81, 0.12);
+    height: auto;
+    @media(min-width: 576px){
+      width: 370px;
+    }
+  }
+
+  .swiper-btn-prev, .swiper-btn-next {
+    position: absolute;
+    top: 45%;
+    opacity: 0;
+  }
+
+  .swiper-btn-prev {
+    left: 5px;
+  }
+
+  .swiper-btn-next {
+    right: 5px;
+  }
+
+  .review-card {
+    padding: 30px 15px;
+    box-shadow: 0 4px 12px rgba(60, 60, 81, 0.12);
+    border-radius: 10px;
+    background: #ffffff;
+    &__name {
+      margin: 0 0 15px;
+    }
+    &__text {
+      opacity: 0.5;
+      height: 170px;
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background: linear-gradient(to bottom, rgba(255,255,255, 0.1), #FFFFFF 100%);
+      }
+    }
+  }
+}

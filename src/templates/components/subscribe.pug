@@ -1,0 +1,22 @@
+.subscribe
+  .container
+    .subscribe__place
+      .subscribe__title Хотите быть в курсе наших новостей? Подпишитесь на рассылку!
+      form.subscribe-form
+        .subscribe-form__container
+          .subscribe-form__field
+            input(type="text" placeholder="Ваше имя*").subscribe-form__input
+          .subscribe-form__field
+            input(type="text" placeholder="Ваше e-mail*").subscribe-form__input
+          .subscribe-form__field
+            button(type="submit").btn.btn-secondary Подписаться
+        .subscribe-form__container
+          .subscribe-form__info
+            .subscribe-form__required *Обязательные поля для заполнения
+          .subscribe-form__policy
+            .checkbox
+              label
+                input(type="checkbox" checked)
+                .checkbox__cr
+                .checkbox__text
+                  | Я согласен на обработку <a href="#">персональных данных</a>

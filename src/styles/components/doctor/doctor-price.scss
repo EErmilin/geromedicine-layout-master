@@ -1,0 +1,12 @@
+.doctor-price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  &__name {
+    margin-right: 10px;
+  }
+  &__value {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}

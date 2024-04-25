@@ -1,0 +1,49 @@
+extends layouts/main
+
+block header
+  include layouts/header
+
+block content
+  nav(aria-label="breadcrumb" class="breadcrumb-place" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);")
+    .container
+      ol.breadcrumb
+        li.breadcrumb-item: a(href="/"): svg(class="svg-icon" viewBox="0 0 14 14" width="14" height="14"): use(xlink:href="#svg-breadcrumb-home")
+        li.breadcrumb-item.active Поиск
+
+  .page__content
+    .container
+      h1.page__title Поиск
+      .search-page
+        .search-page__search
+          form.c-search
+            .c-search__field
+              input(type="text" placeholder="Поиск" value="Лечение")
+            button(type="submit").c-search__submit
+              svg(class="svg-icon" viewBox="0 0 16 17" width="16" height="17"): use(xlink:href="#svg-search")
+          .search-page__hint Введите интересующую Вас тему
+
+        .search-page__direction По запросу «Лечение» найдено 500 материалов
+        .search-page__result
+          .search-result
+            .search-result__item
+              .search-result__title: a(href="#") <span class="highlight">Лечение</span> альцгеймера в клинике Геромедицина
+              .search-result__text
+                p Люди пожилого и старческого возраста (в отличие от более молодых) имеют множество заболеваний и проблем, которые являются причиной плохого самочувствия и значительного снижения качества их жизни.
+                p Проводить диагностику и лечение в таких случаях лучше доверить специалистам, знающим возрастные особенности пожилого человека.
+            .search-result__item
+              .search-result__title: a(href="#") <span class="highlight">Лечение</span> альцгеймера в клинике Геромедицина
+              .search-result__text
+                p Люди пожилого и старческого возраста (в отличие от более молодых) имеют множество заболеваний и проблем, которые являются причиной плохого самочувствия и значительного снижения качества их жизни.
+                p Проводить диагностику и лечение в таких случаях лучше доверить специалистам, знающим возрастные особенности пожилого человека.
+            .search-result__item
+              .search-result__title: a(href="#") <span class="highlight">Лечение</span> альцгеймера в клинике Геромедицина
+              .search-result__text
+                p Люди пожилого и старческого возраста (в отличие от более молодых) имеют множество заболеваний и проблем, которые являются причиной плохого самочувствия и значительного снижения качества их жизни.
+                p Проводить диагностику и лечение в таких случаях лучше доверить специалистам, знающим возрастные особенности пожилого человека.
+        .search-page__pagination
+          include components/pagination
+
+  include components/map
+
+block footer
+  include layouts/footer
